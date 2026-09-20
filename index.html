@@ -413,6 +413,9 @@
                     <button onclick="filterStories('recovery')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition">
                         التعافي واستعادة الهوية الفطرية
                     </button>
+                    <button onclick="filterStories('young-adults')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition">
+                        الشباب والبالغين (20 - 25 سنة)
+                    </button>
                     <button onclick="filterStories('anger')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition">
                         العصبية والعناد
                     </button>
@@ -466,7 +469,7 @@
                     </div>
                 </div>
 
-                <!-- Kid Story Card 2: Muhammad Baksari (New) -->
+                <!-- Kid Story Card 2: Muhammad Baksari (Updated) -->
                 <div class="story-card recovery screen bg-slate-800/90 border border-slate-700 rounded-3xl p-6 flex flex-col justify-between hover:border-brand-500/60 transition duration-300 shadow-xl">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -476,7 +479,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-extrabold text-white text-base font-heading">محمد باكسري</h4>
-                                    <span class="text-xs text-slate-400">29 سنة • فوج تمكين الشباب والوعي الفطري</span>
+                                    <span class="text-xs text-slate-400">16 سنة • فوج تمكين الشباب والوعي الفطري</span>
                                 </div>
                             </div>
                             <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">
@@ -487,8 +490,8 @@
                         <!-- Quote content -->
                         <div class="space-y-3 pt-2">
                             <div class="text-purple-400 text-2xl font-serif">“</div>
-                            <p class="text-slate-300 text-sm leading-relaxed -mt-4">
-                                أغرقني إدمان ألعاب الفيديو، وتحديداً مودات "سكايرم"، في تشويش فكري وهوية مشتتة أثّرت على سلوكي وفطرتي، حتى ظنت عائلتي أن ميولي انحرفت، وزاد إحباط شخص كان يلاحقني بعثرات الماضي من شعوري بالعجز. لكن في "مخيم بصمة"، ومع الانقطاع التام عن الشاشات وجلسات العلاج السلوكي، تحررت من أوهام الماضي ونظرات الشك، لأستعيد صفائي الفطري وهويتي السوية كرجل قوي صاحب هدف.
+                            <p class="text-slate-300 text-sm leading-relaxed -mt-4" id="k2-quote-text">
+                                أدمنت ألعاب الفيديو لساعات طويلة، وكنت غارقاً في تعديلات ومودات لعبة "سكايرم" (Skyrim mods) حتى تأثر تفكيري وسلوكي وميولي الفطرية والجسدية بصورة سلبية جداً وجعلتني مشوش الهوية. ما زاد حالتي سوءاً هو وجود شخص كان يلاحقني دائماً بتذكيري بأخطاء وسقطات الماضي ويحبطني، حتى أقنعني أنني لا أستطيع التغيير أبداً. في مخيم بصمة، ومع قطع الشاشات تماماً وورش العلاج السلوكي، تعلمت كيف أقطع حبال الماضي وأتحرر من كلام المحبطين. استعدت صفائي الفطري، وبدأت أرى نفسي شاباً قوياً صاحب هدف وشخصية سوية.
                             </p>
                         </div>
                     </div>
@@ -515,7 +518,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-extrabold text-white text-base font-heading">فيصل الحربي</h4>
-                                    <span class="text-xs text-slate-400">20 سنة • مخيم الصيف القيادي</span>
+                                    <span class="text-xs text-slate-400">14 سنة • مخيم الصيف القيادي</span>
                                 </div>
                             </div>
                             <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
@@ -581,6 +584,82 @@
                     </div>
                 </div>
 
+                <!-- Young Adult Story Card 5: Meshal Al-Ghamdi (20 years) -->
+                <div class="story-card young-adults screen bg-slate-800/90 border border-slate-700 rounded-3xl p-6 flex flex-col justify-between hover:border-brand-500/60 transition duration-300 shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-600 to-blue-500 flex items-center justify-center font-bold text-lg text-white shadow-sm">
+                                    م
+                                </div>
+                                <div>
+                                    <h4 class="font-extrabold text-white text-base font-heading">مشعل الغامدي</h4>
+                                    <span class="text-xs text-slate-400">20 سنة • فوج القيادة وتمكين الشباب الجامعي</span>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">
+                                الهروب الرقمي والتعثر الدراسي
+                            </span>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="text-sky-400 text-2xl font-serif">“</div>
+                            <p class="text-slate-300 text-sm leading-relaxed -mt-4">
+                                في سنتي الجامعية الثانية كدت أن أُفصل بسبب السهر لـ 14 ساعة يومياً في بطولات الألعاب التنافسية. كنت أهرب من قلق المستقبل وضغوط الاختبارات إلى الشاشة. المخيم كان نقطة الصفر الحقيقية؛ تعلمت مواجهة الضغوط بدلاً من الهروب، واستبدلت الألعاب بالانضباط البدني وبناء الأهداف. عدت لجامعتي ورفعت معدلي لمرتبة الشرف.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-700/80 grid grid-cols-2 gap-2 text-xs">
+                        <div class="bg-rose-950/40 p-2 rounded-xl border border-rose-900/30">
+                            <div class="font-bold text-rose-400">قبل المخيم:</div>
+                            <div class="text-slate-300">إنذارات أكاديمية وإدمان كامل على ألعاب المنافسة</div>
+                        </div>
+                        <div class="bg-emerald-950/40 p-2 rounded-xl border border-emerald-900/30">
+                            <div class="font-bold text-emerald-400">بعد المخيم:</div>
+                            <div class="text-slate-300">انتظام أكاديمي ممتاز، تخطيط مهني ورياضة يومية</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Young Adult Story Card 6: Talal Al-Dawsari (25 years) -->
+                <div class="story-card young-adults recovery bg-slate-800/90 border border-slate-700 rounded-3xl p-6 flex flex-col justify-between hover:border-brand-500/60 transition duration-300 shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-600 to-emerald-500 flex items-center justify-center font-bold text-lg text-white shadow-sm">
+                                    ط
+                                </div>
+                                <div>
+                                    <h4 class="font-extrabold text-white text-base font-heading">طلال الدوسري</h4>
+                                    <span class="text-xs text-slate-400">25 سنة • مسار الانضباط التنفيذي وإعادة التوجيه المهني</span>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                                التسويف المزمن والعزلة الاجتماعية
+                            </span>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="text-emerald-400 text-2xl font-serif">“</div>
+                            <p class="text-slate-300 text-sm leading-relaxed -mt-4">
+                                رغم تخرجي ووصولي لسن الـ 25، كنت أعيش في عزلة بغرفتي دون وظيفة وأقضي الليالي في التفكير الزائد والعادات السلبية. كنت أظن أن المخيمات للأطفال فقط، لكن مسار الشباب البالغين أثبت لي العكس. عشت أسبوعين من المواجهة الصريحة والانضباط العسكري المرن مع رجال ناضجين. تخلصت من دور الضحية، وأسست مشروعي الخاص بعد شهر من التخرج.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-700/80 grid grid-cols-2 gap-2 text-xs">
+                        <div class="bg-rose-950/40 p-2 rounded-xl border border-rose-900/30">
+                            <div class="font-bold text-rose-400">قبل المخيم:</div>
+                            <div class="text-slate-300">عزلة تامة، نوم غير منتظم، وفقدان الشغف والمسؤولية</div>
+                        </div>
+                        <div class="bg-emerald-950/40 p-2 rounded-xl border border-emerald-900/30">
+                            <div class="font-bold text-emerald-400">بعد المخيم:</div>
+                            <div class="text-slate-300">انضباط صارم، انخراط بسوق العمل، وحياة اجتماعية متزنة</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Parent Testimonial Note Banner -->
@@ -637,34 +716,34 @@
             <div id="sched-morning" class="schedule-content max-w-4xl mx-auto space-y-4">
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
                     <div class="w-16 h-16 rounded-xl bg-brand-50 text-brand-700 font-bold flex flex-col items-center justify-center shrink-0 border border-brand-200">
-                        <span class="text-sm">05:30</span>
-                        <span class="text-[10px]">صباحاً</span>
+                        <span class="text-sm time-num">05:30</span>
+                        <span class="text-[10px] time-label">صباحاً</span>
                     </div>
                     <div class="space-y-1">
-                        <h4 class="text-lg font-bold text-navy-900 font-heading">الاستيقاظ وصلاة الفجر وترتيب المهاجع</h4>
-                        <p class="text-slate-600 text-sm">البداية بروح إيمانية هادئة، تليها مسابقة يومية لأفضل غرفة مرتبة بنظام النقاط التراكمي لغرس الاعتماد على النفس.</p>
+                        <h4 class="text-lg font-bold text-navy-900 font-heading item-title">الاستيقاظ وصلاة الفجر وترتيب المهاجع</h4>
+                        <p class="text-slate-600 text-sm item-desc">البداية بروح إيمانية هادئة، تليها مسابقة يومية لأفضل غرفة مرتبة بنظام النقاط التراكمي لغرس الاعتماد على النفس.</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
                     <div class="w-16 h-16 rounded-xl bg-brand-50 text-brand-700 font-bold flex flex-col items-center justify-center shrink-0 border border-brand-200">
-                        <span class="text-sm">06:30</span>
-                        <span class="text-[10px]">صباحاً</span>
+                        <span class="text-sm time-num">06:30</span>
+                        <span class="text-[10px] time-label">صباحاً</span>
                     </div>
                     <div class="space-y-1">
-                        <h4 class="text-lg font-bold text-navy-900 font-heading">اللياقة البدنية الصباحية وتمارين التنفس</h4>
-                        <p class="text-slate-600 text-sm">الجري الخفيف في الهواء الطلق، تمارين الإطالة، وتدريبات التنفس لتهدئة الجهاز العصبي وزيادة التركيز الذهني.</p>
+                        <h4 class="text-lg font-bold text-navy-900 font-heading item-title">اللياقة البدنية الصباحية وتمارين التنفس</h4>
+                        <p class="text-slate-600 text-sm item-desc">الجري الخفيف في الهواء الطلق، تمارين الإطالة، وتدريبات التنفس لتهدئة الجهاز العصبي وزيادة التركيز الذهني.</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
                     <div class="w-16 h-16 rounded-xl bg-brand-50 text-brand-700 font-bold flex flex-col items-center justify-center shrink-0 border border-brand-200">
-                        <span class="text-sm">07:45</span>
-                        <span class="text-[10px]">صباحاً</span>
+                        <span class="text-sm time-num">07:45</span>
+                        <span class="text-[10px] time-label">صباحاً</span>
                     </div>
                     <div class="space-y-1">
-                        <h4 class="text-lg font-bold text-navy-900 font-heading">وجبة الإفطار الصحي الجماعي</h4>
-                        <p class="text-slate-600 text-sm">وجبة مدروسة من خبير التغذية تخلو من السكريات المصنعة والمواد الحافظة التي تسبب فرط الحركة والعصبية.</p>
+                        <h4 class="text-lg font-bold text-navy-900 font-heading item-title">وجبة الإفطار الصحي الجماعي</h4>
+                        <p class="text-slate-600 text-sm item-desc">وجبة مدروسة من خبير التغذية تخلو من السكريات المصنعة والمواد الحافظة التي تسبب فرط الحركة والعصبية.</p>
                     </div>
                 </div>
             </div>
@@ -673,23 +752,23 @@
             <div id="sched-afternoon" class="schedule-content hidden max-w-4xl mx-auto space-y-4">
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
                     <div class="w-16 h-16 rounded-xl bg-amber-50 text-amber-700 font-bold flex flex-col items-center justify-center shrink-0 border border-amber-200">
-                        <span class="text-sm">10:00</span>
-                        <span class="text-[10px]">صباحاً</span>
+                        <span class="text-sm time-num">10:00</span>
+                        <span class="text-[10px] time-label">صباحاً</span>
                     </div>
                     <div class="space-y-1">
-                        <h4 class="text-lg font-bold text-navy-900 font-heading">تحدي المهارات والمغامرة الخارجية</h4>
-                        <p class="text-slate-600 text-sm">التسلق الآمن، مسارات الموانع، قراءة الخرائط، والإسعافات الأولية؛ لتعليم الصبر والتفكير المنطقي تحت الضغط.</p>
+                        <h4 class="text-lg font-bold text-navy-900 font-heading item-title">تحدي المهارات والمغامرة الخارجية</h4>
+                        <p class="text-slate-600 text-sm item-desc">التسلق الآمن، مسارات الموانع، قراءة الخرائط، والإسعافات الأولية؛ لتعليم الصبر والتفكير المنطقي تحت الضغط.</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
                     <div class="w-16 h-16 rounded-xl bg-amber-50 text-amber-700 font-bold flex flex-col items-center justify-center shrink-0 border border-amber-200">
-                        <span class="text-sm">01:30</span>
-                        <span class="text-[10px]">ظهراً</span>
+                        <span class="text-sm time-num">01:30</span>
+                        <span class="text-[10px] time-label">ظهراً</span>
                     </div>
                     <div class="space-y-1">
-                        <h4 class="text-lg font-bold text-navy-900 font-heading">الغداء والراحة واستراحة القراءة</h4>
-                        <p class="text-slate-600 text-sm">وقت هادئ للقراءة وممارسة ألعاب الذكاء الطاولة وتفريغ الأفكار في دفتر اليوميات المخصص لكل مشارك.</p>
+                        <h4 class="text-lg font-bold text-navy-900 font-heading item-title">الغداء والراحة واستراحة القراءة</h4>
+                        <p class="text-slate-600 text-sm item-desc">وقت هادئ للقراءة وممارسة ألعاب الذكاء الطاولة وتفريغ الأفكار في دفتر اليوميات المخصص لكل مشارك.</p>
                     </div>
                 </div>
             </div>
@@ -698,23 +777,23 @@
             <div id="sched-evening" class="schedule-content hidden max-w-4xl mx-auto space-y-4">
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
                     <div class="w-16 h-16 rounded-xl bg-indigo-50 text-indigo-700 font-bold flex flex-col items-center justify-center shrink-0 border border-indigo-200">
-                        <span class="text-sm">05:30</span>
-                        <span class="text-[10px]">مساءً</span>
+                        <span class="text-sm time-num">05:30</span>
+                        <span class="text-[10px] time-label">مساءً</span>
                     </div>
                     <div class="space-y-1">
-                        <h4 class="text-lg font-bold text-navy-900 font-heading">حلقة الحوار التفاعلي (دائرة الشجاعة)</h4>
-                        <p class="text-slate-600 text-sm">جلسة آمنة مع الأخصائي النفسي لمناقشة مواقف اليوم، كيف تحكم المشاركون في مشاعرهم، وتصحيح الأخطاء دون لوم.</p>
+                        <h4 class="text-lg font-bold text-navy-900 font-heading item-title">حلقة الحوار التفاعلي (دائرة الشجاعة)</h4>
+                        <p class="text-slate-600 text-sm item-desc">جلسة آمنة مع الأخصائي النفسي لمناقشة مواقف اليوم، كيف تحكم المشاركون في مشاعرهم، وتصحيح الأخطاء دون لوم.</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4">
                     <div class="w-16 h-16 rounded-xl bg-indigo-50 text-indigo-700 font-bold flex flex-col items-center justify-center shrink-0 border border-indigo-200">
-                        <span class="text-sm">08:00</span>
-                        <span class="text-[10px]">ليلاً</span>
+                        <span class="text-sm time-num">08:00</span>
+                        <span class="text-[10px] time-label">ليلاً</span>
                     </div>
                     <div class="space-y-1">
-                        <h4 class="text-lg font-bold text-navy-900 font-heading">أمسية السمر والامتنان والنوم المبكر (09:30)</h4>
-                        <p class="text-slate-600 text-sm">مشاركة لحظات الشكر بين الزملاء حول نار المخيم، ثم إطفاء الأنوار لنوم عميق يعيد ضبط إيقاع الجسم الحيوي.</p>
+                        <h4 class="text-lg font-bold text-navy-900 font-heading item-title">أمسية السمر والامتنان والنوم المبكر (09:30)</h4>
+                        <p class="text-slate-600 text-sm item-desc">مشاركة لحظات الشكر بين الزملاء حول نار المخيم، ثم إطفاء الأنوار لنوم عميق يعيد ضبط إيقاع الجسم الحيوي.</p>
                     </div>
                 </div>
             </div>
@@ -930,19 +1009,19 @@
     <section id="faq" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
-                <span class="text-brand-600 font-bold text-sm bg-brand-50 px-4 py-1.5 rounded-full border border-brand-200">
+                <span class="text-brand-600 font-bold text-sm bg-brand-50 px-4 py-1.5 rounded-full border border-brand-200" id="faq-badge">
                     إجابات لراحة بالك
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black text-navy-900 mt-3 font-heading">
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-900 mt-3 font-heading" id="faq-heading">
                     الأسئلة الأكثر شيوعاً بين أولياء الأمور
                 </h2>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-4" id="faq-container">
                 <!-- FAQ item 1 -->
-                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden faq-item">
                     <button onclick="toggleFaq(this)" class="w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900">
-                        <span>هل المخيم عسكري أو يعتمد على القسوة؟</span>
+                        <span class="faq-question">هل المخيم عسكري أو يعتمد على القسوة؟</span>
                         <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden p-5 text-sm text-slate-600 bg-white border-t border-slate-100 leading-relaxed">
@@ -951,9 +1030,9 @@
                 </div>
 
                 <!-- FAQ item 2 -->
-                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden faq-item">
                     <button onclick="toggleFaq(this)" class="w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900">
-                        <span>كيف يمكنني التواصل مع ابني أثناء فترة المخيم؟</span>
+                        <span class="faq-question">كيف يمكنني التواصل مع ابني أثناء فترة المخيم؟</span>
                         <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden p-5 text-sm text-slate-600 bg-white border-t border-slate-100 leading-relaxed">
@@ -962,9 +1041,9 @@
                 </div>
 
                 <!-- FAQ item 3 -->
-                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden faq-item">
                     <button onclick="toggleFaq(this)" class="w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900">
-                        <span>ماذا لو رفض ابني البقاء وأصر على العودة للمنزل؟</span>
+                        <span class="faq-question">ماذا لو رفض ابني البقاء وأصر على العودة للمنزل؟</span>
                         <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden p-5 text-sm text-slate-600 bg-white border-t border-slate-100 leading-relaxed">
@@ -973,9 +1052,9 @@
                 </div>
 
                 <!-- FAQ item 4 -->
-                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden faq-item">
                     <button onclick="toggleFaq(this)" class="w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900">
-                        <span>هل يتم تقديم شهادة أو تقرير عند التخرج؟</span>
+                        <span class="faq-question">هل يتم تقديم شهادة أو تقرير عند التخرج؟</span>
                         <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden p-5 text-sm text-slate-600 bg-white border-t border-slate-100 leading-relaxed">
@@ -1285,6 +1364,7 @@
                 filterAll: "كل التجارب",
                 filterScreen: "إدمان الألعاب والشاشات",
                 filterRecovery: "التعافي واستعادة الهوية الفطرية",
+                filterYoungAdults: "الشباب والبالغين (20 - 25 سنة)",
                 filterAnger: "العصبية والعناد",
                 filterShyness: "الخجل وضعف الثقة",
                 // Kid 1
@@ -1323,6 +1403,24 @@
                 k4BeforeDesc: "عزلة تامة وتجنب الحديث مع الناس",
                 k4AfterLabel: "بعد المخيم:",
                 k4AfterDesc: "شخصية واثقة ومتحدث بارع في صفه",
+                // Kid 5 (Meshal - 20)
+                k5Name: "مشعل الغامدي",
+                k5Meta: "20 سنة • فوج القيادة وتمكين الشباب الجامعي",
+                k5Tag: "الهروب الرقمي والتعثر الدراسي",
+                k5Quote: "في سنتي الجامعية الثانية كدت أن أُفصل بسبب السهر لـ 14 ساعة يومياً في بطولات الألعاب التنافسية. كنت أهرب من قلق المستقبل وضغوط الاختبارات إلى الشاشة. المخيم كان نقطة الصفر الحقيقية؛ تعلمت مواجهة الضغوط بدلاً من الهروب، واستبدلت الألعاب بالانضباط البدني وبناء الأهداف. عدت لجامعتي ورفعت معدلي لمرتبة الشرف.",
+                k5BeforeLabel: "قبل المخيم:",
+                k5BeforeDesc: "إنذارات أكاديمية وإدمان كامل على ألعاب المنافسة",
+                k5AfterLabel: "بعد المخيم:",
+                k5AfterDesc: "انتظام أكاديمي ممتاز، تخطيط مهني ورياضة يومية",
+                // Kid 6 (Talal - 25)
+                k6Name: "طلال الدوسري",
+                k6Meta: "25 سنة • مسار الانضباط التنفيذي وإعادة التوجيه المهني",
+                k6Tag: "التسويف المزمن والعزلة الاجتماعية",
+                k6Quote: "رغم تخرجي ووصولي لسن الـ 25، كنت أعيش في عزلة بغرفتي دون وظيفة وأقضي الليالي في التفكير الزائد والعادات السلبية. كنت أظن أن المخيمات للأطفال فقط، لكن مسار الشباب البالغين أثبت لي العكس. عشت أسبوعين من المواجهة الصريحة والانضباط العسكري المرن مع رجال ناضجين. تخلصت من دور الضحية، وأسست مشروعي الخاص بعد شهر من التخرج.",
+                k6BeforeLabel: "قبل المخيم:",
+                k6BeforeDesc: "عزلة تامة، نوم غير منتظم، وفقدان الشغف والمسؤولية",
+                k6AfterLabel: "بعد المخيم:",
+                k6AfterDesc: "انضباط صارم، انخراط بسوق العمل، وحياة اجتماعية متزنة",
                 // Parent Testimonial Banner
                 parentTitle: "رسالة من والدة الطالب عمر (15 سنة):",
                 parentQuote: "“أرسلت ابني وأنا خائفة ومترددة، لكنه عاد إليّ رجلاً مسؤولاً يقبل رأسي، يرتب غرفته دون أن أطلب منه، ويسألني كيف يمكنه مساعدتي. شكراً لفريق مخيم بصمة لأنكم أعدتم لي ابني كما تمنيت.”",
@@ -1334,6 +1432,20 @@
                 tabMorning: "الفترة الصباحية (النشاط والانضباط)",
                 tabAfternoon: "فترة الظهيرة (التحدي والمهارة)",
                 tabEvening: "الفترة المسائية (الحوار والتأمل)",
+                // Routine items
+                routineMorning: [
+                    { time: "05:30", label: "صباحاً", title: "الاستيقاظ وصلاة الفجر وترتيب المهاجع", desc: "البداية بروح إيمانية هادئة، تليها مسابقة يومية لأفضل غرفة مرتبة بنظام النقاط التراكمي لغرس الاعتماد على النفس." },
+                    { time: "06:30", label: "صباحاً", title: "اللياقة البدنية الصباحية وتمارين التنفس", desc: "الجري الخفيف في الهواء الطلق، تمارين الإطالة، وتدريبات التنفس لتهدئة الجهاز العصبي وزيادة التركيز الذهني." },
+                    { time: "07:45", label: "صباحاً", title: "وجبة الإفطار الصحي الجماعي", desc: "وجبة مدروسة من خبير التغذية تخلو من السكريات المصنعة والمواد الحافظة التي تسبب فرط الحركة والعصبية." }
+                ],
+                routineAfternoon: [
+                    { time: "10:00", label: "صباحاً", title: "تحدي المهارات والمغامرة الخارجية", desc: "التسلق الآمن، مسارات الموانع، قراءة الخرائط، والإسعافات الأولية؛ لتعليم الصبر والتفكير المنطقي تحت الضغط." },
+                    { time: "01:30", label: "ظهراً", title: "الغداء والراحة واستراحة القراءة", desc: "وقت هادئ للقراءة وممارسة ألعاب الذكاء الطاولة وتفريغ الأفكار في دفتر اليوميات المخصص لكل مشارك." }
+                ],
+                routineEvening: [
+                    { time: "05:30", label: "مساءً", title: "حلقة الحوار التفاعلي (دائرة الشجاعة)", desc: "جلسة آمنة مع الأخصائي النفسي لمناقشة مواقف اليوم، كيف تحكم المشاركون في مشاعرهم، وتصحيح الأخطاء دون لوم." },
+                    { time: "08:00", label: "ليلاً", title: "أمسية السمر والامتنان والنوم المبكر (09:30)", desc: "مشاركة لحظات الشكر بين الزملاء حول نار المخيم، ثم إطفاء الأنوار لنوم عميق يعيد ضبط إيقاع الجسم الحيوي." }
+                ],
                 // Programs
                 progTag: "المسارات التدريبية",
                 progTitle: "برامج مخصصة حسب الفئة العمرية ونوع التحدي",
@@ -1376,6 +1488,24 @@
                 // FAQ
                 faqTag: "إجابات لراحة بالك",
                 faqTitle: "الأسئلة الأكثر شيوعاً بين أولياء الأمور",
+                faqs: [
+                    {
+                        q: "هل المخيم عسكري أو يعتمد على القسوة؟",
+                        a: "أبداً. نحن نرفض القسوة أو الإهانة أو العقاب البدني إطلاقاً. أسلوبنا يعتمد على \"الحزم العطوف\" (Firm & Kind) وعلى منهجية العلاج المعرفي السلوكي. نضع قواعد واضحة ونشجع الطفل على احترامها عبر التحفيز الإيجابي وتحمل العواقب الطبيعية لاختياراته في بيئة تسودها المودة والاحترام."
+                    },
+                    {
+                        q: "كيف يمكنني التواصل مع ابني أثناء فترة المخيم؟",
+                        a: "لتحقيق فاعلية \"الديتوكس الرقمي\" واستقلالية الطفل، يتم منع استخدام الهواتف الشخصية. ومع ذلك، يحصل ولي الأمر على تقرير مصور يومي عبر تطبيقنا الخاص، وتتاح مكالمة هاتفية أسبوعية منظمة بإشراف الأخصائي، مع وجود خط اتصال طوارئ متاح للأهل 24 ساعة."
+                    },
+                    {
+                        q: "ماذا لو رفض ابني البقاء وأصر على العودة للمنزل؟",
+                        a: "من الطبيعي جداً أن يشعر الطفل بمقاومة في أول 48 ساعة بسبب الحرمان من عاداته السابقة والشاشات. يتدخل فريقنا الإرشادي المتمرس عبر بروتوكول الاحتواء والتشتيت وتكليفه بمهام شيقة مع زملائه. 98% من الأطفال يندمجون تماماً بحلول اليوم الثالث ويصبحون فخورين بما يحققونه."
+                    },
+                    {
+                        q: "هل يتم تقديم شهادة أو تقرير عند التخرج؟",
+                        a: "نعم، في اليوم الختامي نحتفل بحفل تخرج رسمي بحضور أولياء الأمور، ويتسلم الطفل وسام التحدي وشهادة الإنجاز، بالإضافة إلى ملف تحليلي سلوكي كامل للأهل يتضمن خطة استرشادية للتعامل مع ابنهم في البيت والمدرسة."
+                    }
+                ],
                 // Register
                 regTag: "خطوة أولى نحو التحول",
                 regTitle: "طلب تقييم أولي وحجز مقعد",
@@ -1457,10 +1587,11 @@
                 // Stories Section
                 expTag: "Their Voices Tell The Story",
                 expTitle: "Youth Experiences: How We Changed",
-                expDesc: "Listen to and read the authentic words of youth who took the challenge—from the fear of leaving their comfort zones to the joy of triumph.",
+                expDesc: "Listen to and read the authentic words of youth and young men who took the challenge—from the fear of leaving their comfort zones to the joy of triumph.",
                 filterAll: "All Stories",
                 filterScreen: "Screen & Gaming Detox",
                 filterRecovery: "Recovery & Restoring Natural Identity",
+                filterYoungAdults: "Young Adults (20 - 25 yrs)",
                 filterAnger: "Anger & Defiance",
                 filterShyness: "Shyness & Low Self-Esteem",
                 // Kid 1
@@ -1472,11 +1603,11 @@
                 k1BeforeDesc: "10 hours daily glued to screens",
                 k1AfterLabel: "After Camp:",
                 k1AfterDesc: "1 strictly scheduled hour & daily fitness routine",
-                // Kid 2 (Mohammed Baksari)
+                // Kid 2 (Mohammed Baksari - Updated with Exact Requested Text)
                 k2Name: "Mohammed Baksari",
                 k2Meta: "16 yrs • Youth Empowerment & Natural Alignment Cohort",
-                k2Tag: "Overcoming the Past & Course Correction",
-                k2Quote: "My video game addiction—especially Skyrim mods—dragged me into mental chaos and identity confusion that warped my behavior and natural self, to the point where my family believed I was gay. To make matters worse, someone constantly pursued and reminded me of past mistakes, convincing me that I could never change. But at Basma Camp, through a complete digital detox and behavioral therapy workshops, I broke free from the burdens of the past and the doubts around me, reclaiming my inner clarity and building a grounded, purposeful identity as a strong man.",
+                k2Tag: "Overcoming the Past & Identity Restoration",
+                k2Quote: "My video game addiction—especially Skyrim mods—dragged me into mental chaos and identity confusion that warped my behavior and natural self, to the point where my family believed I was gay. To make matters worse, someone constantly pursued and reminded of with past mistakes, convincing me that I could never change. But at Basma Camp, through a complete digital detox and behavioral therapy workshops, I broke free from the burdens of the past and the doubts around me, reclaiming my inner clarity and building a grounded, purposeful identity as a strong man.",
                 k2BeforeLabel: "Before Camp:",
                 k2BeforeDesc: "Identity & instinct confusion under toxic gaming and relentless past blame",
                 k2AfterLabel: "After Camp:",
@@ -1499,6 +1630,24 @@
                 k4BeforeDesc: "Withdrawn and avoiding social situations",
                 k4AfterLabel: "After Camp:",
                 k4AfterDesc: "Confident, assertive speaker in class",
+                // Kid 5 (Meshal - 20)
+                k5Name: "Meshal Al-Ghamdi",
+                k5Meta: "20 yrs • Young Adult University Empowerment Cohort",
+                k5Tag: "Digital Escapism & Academic Crisis",
+                k5Quote: "In my sophomore university year, I was nearly expelled because I played competitive games for 14 hours a day to escape exam stress and future anxiety. Basma Camp was my true reset; I learned to face pressure head-on rather than run away, swapping toxic gaming for physical grit and goal setting. I returned to university and raised my GPA to Dean's Honors list.",
+                k5BeforeLabel: "Before Camp:",
+                k5BeforeDesc: "Academic probation and severe addiction to competitive gaming",
+                k5AfterLabel: "After Camp:",
+                k5AfterDesc: "Academic excellence, clear career planning, and daily physical fitness",
+                // Kid 6 (Talal - 25)
+                k6Name: "Talal Al-Dawsari",
+                k6Meta: "25 yrs • Executive Discipline & Adult Transformation Track",
+                k6Tag: "Chronic Procrastination & Isolation",
+                k6Quote: "Even after graduating college at 25, I was isolated in my bedroom without a job, wasting nights in overthinking and destructive habits. I thought camps were only for young children, but the Young Adults Track proved otherwise. I spent two weeks of rigorous honesty, tough love, and physical grit alongside mature men. I shed the victim mindset and launched my own business within a month of graduating.",
+                k6BeforeLabel: "Before Camp:",
+                k6BeforeDesc: "Complete social withdrawal, wrecked sleep cycle, and zero accountability",
+                k6AfterLabel: "After Camp:",
+                k6AfterDesc: "Rigorous self-discipline, thriving business career, and balanced social life",
                 // Parent Testimonial Banner
                 parentTitle: "A heartfelt letter from the mother of Omar (15 yrs):",
                 parentQuote: "“I sent my son with fear and doubts, but he returned a respectful, dependable young man who greets me with love, cleans his room unprompted, and asks how he can help our family. Basma Camp gave me back the son I had prayed for.”",
@@ -1510,6 +1659,20 @@
                 tabMorning: "Morning: Discipline & Vitality",
                 tabAfternoon: "Afternoon: Challenges & Skills",
                 tabEvening: "Evening: Reflection & Circles",
+                // Routine items
+                routineMorning: [
+                    { time: "05:30", label: "AM", title: "Wake-up, Dawn Reflection & Quarters Inspection", desc: "A tranquil and mindful start, followed by daily room organization competitions using cumulative points to cultivate self-reliance." },
+                    { time: "06:30", label: "AM", title: "Morning Physical Conditioning & Breathwork", desc: "Open-air light jogging, functional stretching, and deep breathing drills to soothe the central nervous system and sharpen focus." },
+                    { time: "07:45", label: "AM", title: "Wholesome Communal Breakfast", desc: "A chef-designed nutrient-rich meal completely free of refined sugars and preservatives that trigger hyperactivity and irritability." }
+                ],
+                routineAfternoon: [
+                    { time: "10:00", label: "AM", title: "Outdoor Wilderness Challenge & Skill Drills", desc: "Safe rope climbing, obstacle navigation, topographical orienteering, and wilderness first aid to foster composure under pressure." },
+                    { time: "01:30", label: "PM", title: "Lunch, Rest & Daily Journaling Session", desc: "A calm period dedicated to reflective reading, strategic board games, and capturing thoughts in each participant's personal growth log." }
+                ],
+                routineEvening: [
+                    { time: "05:30", label: "PM", title: "Circle of Courage (Guided Dialogue)", desc: "A safe psychological forum facilitated by our clinical mentor to dissect the day's experiences, emotional control, and resolving friction without blame." },
+                    { time: "08:00", label: "PM", title: "Campfire Gratitude & Lights Out (09:30)", desc: "Sharing moments of peer gratitude around the campfire, followed by lights-out for restorative sleep that resets natural circadian rhythms." }
+                ],
                 // Programs
                 progTag: "Targeted Pathways",
                 progTitle: "Programs Tailored to Age & Behavioral Needs",
@@ -1552,6 +1715,24 @@
                 // FAQ
                 faqTag: "Answers For Your Peace of Mind",
                 faqTitle: "Frequently Asked Questions By Parents",
+                faqs: [
+                    {
+                        q: "Is the camp military-style or reliant on harshness?",
+                        a: "Never. We strictly reject harshness, humiliation, or physical punishment. Our approach is rooted in 'Firm & Kind' discipline and Cognitive Behavioral Therapy (CBT). We establish clear boundaries and motivate participants through positive reinforcement and natural accountability in an environment of mutual respect and compassion."
+                    },
+                    {
+                        q: "How can I communicate with my son during the camp?",
+                        a: "To ensure the full benefit of our digital detox and foster true independence, personal smartphones are prohibited. However, parents receive daily photo and video logs through our private portal, a weekly scheduled phone call supervised by the mentor, and a 24/7 emergency dispatch line directly to camp leadership."
+                    },
+                    {
+                        q: "What if my child resists staying and demands to go home?",
+                        a: "It is completely natural for participants to experience resistance during the first 48 hours due to screen withdrawal and new boundaries. Our experienced counselors utilize certified containment and de-escalation protocols, pairing them with stimulating peer activities. Over 98% of attendees fully integrate by Day 3 and take immense pride in their achievements."
+                    },
+                    {
+                        q: "Is there a certificate or behavioral evaluation upon graduation?",
+                        a: "Yes. On the final day, we hold a graduation ceremony attended by parents where participants receive the Camp Medal of Resilience and an Achievement Certificate. Parents also receive a comprehensive behavioral report along with a 90-day home integration blueprint."
+                    }
+                ],
                 // Register
                 regTag: "The First Step Toward Growth",
                 regTitle: "Free Assessment & Registration Request",
@@ -1722,18 +1903,19 @@
 
                 // Filters
                 const filterBtns = document.querySelectorAll('#story-filters button');
-                if (filterBtns.length >= 5) {
+                if (filterBtns.length >= 6) {
                     filterBtns[0].textContent = data.filterAll;
                     filterBtns[1].textContent = data.filterScreen;
                     filterBtns[2].textContent = data.filterRecovery;
-                    filterBtns[3].textContent = data.filterAnger;
-                    filterBtns[4].textContent = data.filterShyness;
+                    filterBtns[3].textContent = data.filterYoungAdults;
+                    filterBtns[4].textContent = data.filterAnger;
+                    filterBtns[5].textContent = data.filterShyness;
                 }
 
-                // Kid 1 (Saud)
+                // All 6 stories
                 const cards = document.querySelectorAll('.story-card');
-                if (cards.length >= 4) {
-                    // Kid 1
+                if (cards.length >= 6) {
+                    // Kid 1: Saud
                     cards[0].querySelector('h4').textContent = data.k1Name;
                     cards[0].querySelector('span.text-slate-400').textContent = data.k1Meta;
                     cards[0].querySelector('span.border-rose-500\\/30').textContent = data.k1Tag;
@@ -1743,7 +1925,7 @@
                     cards[0].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k1AfterLabel;
                     cards[0].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k1AfterDesc;
 
-                    // Kid 2 (Mohammed Baksari)
+                    // Kid 2: Mohammed Baksari
                     cards[1].querySelector('h4').textContent = data.k2Name;
                     cards[1].querySelector('span.text-slate-400').textContent = data.k2Meta;
                     cards[1].querySelector('span.border-purple-500\\/30').textContent = data.k2Tag;
@@ -1753,7 +1935,7 @@
                     cards[1].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k2AfterLabel;
                     cards[1].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k2AfterDesc;
 
-                    // Kid 3 (Faisal)
+                    // Kid 3: Faisal
                     cards[2].querySelector('h4').textContent = data.k3Name;
                     cards[2].querySelector('span.text-slate-400').textContent = data.k3Meta;
                     cards[2].querySelector('span.border-amber-500\\/30').textContent = data.k3Tag;
@@ -1763,7 +1945,7 @@
                     cards[2].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k3AfterLabel;
                     cards[2].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k3AfterDesc;
 
-                    // Kid 4 (Yassin)
+                    // Kid 4: Yassin
                     cards[3].querySelector('h4').textContent = data.k4Name;
                     cards[3].querySelector('span.text-slate-400').textContent = data.k4Meta;
                     cards[3].querySelector('span.border-cyan-500\\/30').textContent = data.k4Tag;
@@ -1772,6 +1954,26 @@
                     cards[3].querySelector('.bg-rose-950\\/40 .text-slate-300').textContent = data.k4BeforeDesc;
                     cards[3].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k4AfterLabel;
                     cards[3].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k4AfterDesc;
+
+                    // Young adult 5: Meshal (20)
+                    cards[4].querySelector('h4').textContent = data.k5Name;
+                    cards[4].querySelector('span.text-slate-400').textContent = data.k5Meta;
+                    cards[4].querySelector('span.border-sky-500\\/30').textContent = data.k5Tag;
+                    cards[4].querySelector('p.text-slate-300').textContent = data.k5Quote;
+                    cards[4].querySelector('.bg-rose-950\\/40 .font-bold').textContent = data.k5BeforeLabel;
+                    cards[4].querySelector('.bg-rose-950\\/40 .text-slate-300').textContent = data.k5BeforeDesc;
+                    cards[4].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k5AfterLabel;
+                    cards[4].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k5AfterDesc;
+
+                    // Young adult 6: Talal (25)
+                    cards[5].querySelector('h4').textContent = data.k6Name;
+                    cards[5].querySelector('span.text-slate-400').textContent = data.k6Meta;
+                    cards[5].querySelector('span.border-emerald-500\\/30').textContent = data.k6Tag;
+                    cards[5].querySelector('p.text-slate-300').textContent = data.k6Quote;
+                    cards[5].querySelector('.bg-rose-950\\/40 .font-bold').textContent = data.k6BeforeLabel;
+                    cards[5].querySelector('.bg-rose-950\\/40 .text-slate-300').textContent = data.k6BeforeDesc;
+                    cards[5].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k6AfterLabel;
+                    cards[5].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k6AfterDesc;
                 }
 
                 // Parent Testimonial Banner
@@ -1783,7 +1985,7 @@
                 }
             }
 
-            // Schedule Section
+            // Schedule Section (Full Bilingual Translation)
             const schedSec = document.getElementById('schedule');
             if (schedSec) {
                 schedSec.querySelector('span.text-brand-600').textContent = data.schedTag;
@@ -1796,6 +1998,39 @@
                     schedButtons[1].innerHTML = `<i class="fa-solid fa-mountain-sun ml-1.5 mr-1.5"></i> ${data.tabAfternoon}`;
                     schedButtons[2].innerHTML = `<i class="fa-solid fa-campground ml-1.5 mr-1.5"></i> ${data.tabEvening}`;
                 }
+
+                // Morning Items
+                const mItems = schedSec.querySelectorAll('#sched-morning > div');
+                data.routineMorning.forEach((item, i) => {
+                    if (mItems[i]) {
+                        mItems[i].querySelector('.time-num').textContent = item.time;
+                        mItems[i].querySelector('.time-label').textContent = item.label;
+                        mItems[i].querySelector('.item-title').textContent = item.title;
+                        mItems[i].querySelector('.item-desc').textContent = item.desc;
+                    }
+                });
+
+                // Afternoon Items
+                const aItems = schedSec.querySelectorAll('#sched-afternoon > div');
+                data.routineAfternoon.forEach((item, i) => {
+                    if (aItems[i]) {
+                        aItems[i].querySelector('.time-num').textContent = item.time;
+                        aItems[i].querySelector('.time-label').textContent = item.label;
+                        aItems[i].querySelector('.item-title').textContent = item.title;
+                        aItems[i].querySelector('.item-desc').textContent = item.desc;
+                    }
+                });
+
+                // Evening Items
+                const eItems = schedSec.querySelectorAll('#sched-evening > div');
+                data.routineEvening.forEach((item, i) => {
+                    if (eItems[i]) {
+                        eItems[i].querySelector('.time-num').textContent = item.time;
+                        eItems[i].querySelector('.time-label').textContent = item.label;
+                        eItems[i].querySelector('.item-title').textContent = item.title;
+                        eItems[i].querySelector('.item-desc').textContent = item.desc;
+                    }
+                });
             }
 
             // Programs Section
@@ -1865,11 +2100,27 @@
                 }
             }
 
-            // FAQ Section
+            // FAQ Section (Full Bilingual Translation)
             const faqSec = document.getElementById('faq');
             if (faqSec) {
-                faqSec.querySelector('span.text-brand-600').textContent = data.faqTag;
-                faqSec.querySelector('h2').textContent = data.faqTitle;
+                document.getElementById('faq-badge').textContent = data.faqTag;
+                document.getElementById('faq-heading').textContent = data.faqTitle;
+
+                const faqItems = document.querySelectorAll('.faq-item');
+                data.faqs.forEach((faq, index) => {
+                    if (faqItems[index]) {
+                        const qSpan = faqItems[index].querySelector('.faq-question');
+                        const aDiv = faqItems[index].querySelector('.faq-answer');
+                        const btn = faqItems[index].querySelector('button');
+                        if (qSpan) qSpan.textContent = faq.q;
+                        if (aDiv) aDiv.textContent = faq.a;
+                        if (btn) {
+                            btn.className = lang === 'ar'
+                                ? "w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900"
+                                : "w-full text-left p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900";
+                        }
+                    }
+                });
             }
 
             // Register Section
@@ -1911,7 +2162,7 @@
             if (modal) {
                 modal.querySelector('h3').textContent = data.modalTitle;
                 const modalSub = document.getElementById('modalProgramName');
-                if (modalSub && modalSub.textContent.includes('أكاديمية') || modalSub.textContent.includes('Academy')) {
+                if (modalSub && (modalSub.textContent.includes('أكاديمية') || modalSub.textContent.includes('Academy'))) {
                     modalSub.textContent = data.modalDefaultSub;
                 }
                 const mLabels = modal.querySelectorAll('label');
