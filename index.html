@@ -806,56 +806,56 @@
     <section id="programs" class="py-20 bg-white border-t border-slate-200/70">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-600 font-bold text-sm bg-brand-50 px-4 py-1.5 rounded-full border border-brand-200">
-                    المسارات التدريبية
+                <span class="text-brand-600 font-bold text-sm bg-brand-50 px-4 py-1.5 rounded-full border border-brand-200" id="prog-badge">
+                    المسارات التأهيلية الممتدة
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black text-navy-900 mt-3 font-heading">
-                    برامج مخصصة حسب الفئة العمرية ونوع التحدي
+                <h2 class="text-3xl sm:text-4xl font-black text-navy-900 mt-3 font-heading" id="prog-heading">
+                    برامج ممتدة من 3 إلى 6 أشهر تضمن التحول الجذري المستدام
                 </h2>
-                <p class="text-slate-600 mt-2 text-base">
-                    يتم فرز المشتركين في مجموعات صغيرة متقاربة بالعمر والاحتياج السلوكي لضمان أعلى فائدة.
+                <p class="text-slate-600 mt-2 text-base" id="prog-desc">
+                    نقدم مسارات متكاملة تراعي التطور العمري والنفسي، مع تنوع في الأنشطة بين الديتوكس السلوكي، وتطوير المهارات القيادية، وبناء الانضباط الحياتي.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="programs-container">
                 <!-- Program 1: Junior Path -->
-                <div class="rounded-3xl border border-slate-200 p-7 bg-slate-50 hover:shadow-xl transition relative flex flex-col justify-between">
+                <div class="rounded-3xl border border-slate-200 p-7 bg-slate-50 hover:shadow-xl transition relative flex flex-col justify-between program-card" id="prog-card-1">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-teal-100 text-brand-700 flex items-center justify-center text-xl mb-6">
                             <i class="fa-solid fa-child"></i>
                         </div>
-                        <span class="text-xs font-bold text-brand-700 bg-brand-100/60 px-3 py-1 rounded-full">الفئة: 9 - 12 سنة</span>
-                        <h3 class="text-2xl font-black text-navy-900 mt-3 font-heading">مخيم "البطل الصغير"</h3>
-                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-                            يركز على تقليل التعلق بالأجهزة، تحفيز التركيز، زرع آداب الاستئذان، تنظيم الغرفة والملابس، وبناء الثقة في التواصل مع الأقران.
+                        <span class="text-xs font-bold text-brand-700 bg-brand-100/60 px-3 py-1 rounded-full prog-age">الفئة: 9 - 12 سنة</span>
+                        <h3 class="text-2xl font-black text-navy-900 mt-3 font-heading prog-title">مخيم "البطل الصغير" (3 - 6 أشهر)</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed prog-summary">
+                            برنامج مرحلي يدمج بين فترات المعايشة والتعليم التفاعلي لغرس العادات السليمة وبناء الثقة وفصل الطفل تماماً عن الإدمان الرقمي.
                         </p>
                         
-                        <div class="mt-6 space-y-2.5 text-sm text-slate-700">
+                        <div class="mt-6 space-y-2.5 text-sm text-slate-700 prog-features">
                             <div class="flex items-center gap-2">
                                 <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>مدة المعسكر: 10 أيام مغلقة</span>
+                                <span>المدة: مسار مكثف 3 أشهر أو مسار تحول شامل 6 أشهر</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>ورش تحكم في نوبات الغضب والتشبث</span>
+                                <span>تنوع المسارات: نادي الفنون الحرفية، تحديات الكشافة، والسباحة والفروسية</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>تقرير سلوكي مفصل أسبوعياً للأهل</span>
+                                <span>علاج نوبات التشبث والغضب ورفع التركيز والانضباط المدرسي</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-slate-200">
-                        <button onclick="openRegisterModal('مخيم البطل الصغير (9-12 سنة)')" class="w-full py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm transition">
+                        <button onclick="openRegisterModal('مخيم البطل الصغير (9-12 سنة - 3 إلى 6 أشهر)')" class="w-full py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm transition prog-btn">
                             طلب تسجيل في هذا المسار
                         </button>
                     </div>
                 </div>
 
                 <!-- Program 2: Leader Path (Featured) -->
-                <div class="rounded-3xl border-2 border-brand-500 p-7 bg-white shadow-2xl relative flex flex-col justify-between transform md:-translate-y-3">
-                    <div class="absolute -top-4 right-1/2 translate-x-1/2 bg-gradient-to-r from-brand-600 to-amber-500 text-white text-xs font-black px-4 py-1.5 rounded-full shadow-md uppercase">
+                <div class="rounded-3xl border-2 border-brand-500 p-7 bg-white shadow-2xl relative flex flex-col justify-between transform md:-translate-y-3 program-card" id="prog-card-2">
+                    <div class="absolute -top-4 right-1/2 translate-x-1/2 bg-gradient-to-r from-brand-600 to-amber-500 text-white text-xs font-black px-4 py-1.5 rounded-full shadow-md uppercase prog-highlight">
                         الأكثر طلباً للتحول الإيجابي
                     </div>
 
@@ -863,69 +863,65 @@
                         <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-xl mb-6 shadow-glow">
                             <i class="fa-solid fa-shield"></i>
                         </div>
-                        <span class="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full">الفئة: 13 - 16 سنة</span>
-                        <h3 class="text-2xl font-black text-navy-900 mt-3 font-heading">مخيم "قادة المستقبل"</h3>
-                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-                            صُمم خصيصاً لمرحلة المراهقة والتحديات المصاحبة لها: العناد، الانعزال، ضغط الأصدقاء، وغياب الدافع الدراسي.
+                        <span class="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full prog-age">الفئة: 13 - 16 سنة</span>
+                        <h3 class="text-2xl font-black text-navy-900 mt-3 font-heading prog-title">مخيم "قادة المستقبل" (3 - 6 أشهر)</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed prog-summary">
+                            معايشة كاملة ممتدة صُممت لتجاوز أزمات المراهقة، والعناد، وتكوين الهوية الإيجابية، وصناعة شخصية تتحمل المسؤولية وتعتمد على نفسها.
                         </p>
                         
-                        <div class="mt-6 space-y-2.5 text-sm text-slate-700">
+                        <div class="mt-6 space-y-2.5 text-sm text-slate-700 prog-features">
                             <div class="flex items-center gap-2">
                                 <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>مدة المعسكر: 14 يوماً من المعايشة الكاملة</span>
+                                <span>المدة: ترم كامل (3 إلى 6 أشهر) بمعسكرات تدريبية متتابعة</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>تدريبات مغامرة وبقاء وتطوير الذكاء العاطفي</span>
+                                <span>تنوع الأنشطة: محاكاة القيادة، الروبوتيكس، مهارات البقاء، والخطابة</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>جلسات إرشاد فردية (One-on-One) مع مستشار نفسي</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>خطة استدامة منزلية لمدة 90 يوماً</span>
+                                <span>جلسات علاج سلوكي معرفي فردية مكثفة مع إرشاد أسري موازٍ</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-slate-200">
-                        <button onclick="openRegisterModal('مخيم قادة المستقبل (13-16 سنة)')" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-black text-sm shadow-glow transition">
+                        <button onclick="openRegisterModal('مخيم قادة المستقبل (13-16 سنة - 3 إلى 6 أشهر)')" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-black text-sm shadow-glow transition prog-btn">
                             احجز مقعداً في الفوج القادم
                         </button>
                     </div>
                 </div>
 
-                <!-- Program 3: Adventure & Resilience -->
-                <div class="rounded-3xl border border-slate-200 p-7 bg-slate-50 hover:shadow-xl transition relative flex flex-col justify-between">
+                <!-- Program 3: Adult & Young Men Empowerment (17 to 35 Years) -->
+                <div class="rounded-3xl border border-slate-200 p-7 bg-slate-50 hover:shadow-xl transition relative flex flex-col justify-between program-card" id="prog-card-3">
                     <div>
                         <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-fire"></i>
+                            <i class="fa-solid fa-person-military-pointing"></i>
                         </div>
-                        <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-3 py-1 rounded-full">الفئة: 14 - 17 سنة</span>
-                        <h3 class="text-2xl font-black text-navy-900 mt-3 font-heading">تحدي "المرونة والصمود"</h3>
-                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">
-                            برنامج مكثف للفتية الذين يحتاجون تعزيز الثقة بمواجهة الصعاب الحقيقية، والاعتماد التام على الذات في ظروف الطبيعة الجبلية والصحراوية.
+                        <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-3 py-1 rounded-full prog-age">الفئة: 17 - 35 سنة (الشباب والبالغين)</span>
+                        <h3 class="text-2xl font-black text-navy-900 mt-3 font-heading prog-title">أكاديمية الانضباط واستعادة الفطرة (3 - 6 أشهر)</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed prog-summary">
+                            مسار متخصص ومكثف للشباب والرجال البالغين للتخلص من الإدمانات الرقمية والعادات الهدامة، واستعادة البوصلة الفطرية والمهنية.
                         </p>
                         
-                        <div class="mt-6 space-y-2.5 text-sm text-slate-700">
+                        <div class="mt-6 space-y-2.5 text-sm text-slate-700 prog-features">
                             <div class="flex items-center gap-2">
                                 <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>مدة المعسكر: 7 أيام معايشة برية مكثفة</span>
+                                <span>المدة: مسار تأهيلي من 3 إلى 6 أشهر بانضباط عالٍ</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>تدريبات الإسعافات والدفاع عن النفس</span>
+                                <span>تنوع المسارات: التدريب البدني التكتيكي، التخطيط المهني والمالي، وتطوير الرجولة المسؤولة</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <i class="fa-solid fa-check text-brand-600 text-xs"></i>
-                                <span>إشراف طبي ورياضي متواصل 24/7</span>
+                                <span>ديتوكس رقمي كامل وجلسات فردية لتفكيك صدمات وعقد الماضي والمحبطين</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-8 pt-6 border-t border-slate-200">
-                        <button onclick="openRegisterModal('تحدي المرونة والصمود (14-17 سنة)')" class="w-full py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm transition">
+                        <button onclick="openRegisterModal('أكاديمية الانضباط واستعادة الفطرة (17-35 سنة - 3 إلى 6 أشهر)')" class="w-full py-3 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm transition prog-btn">
                             طلب تسجيل في هذا المسار
                         </button>
                     </div>
@@ -1021,47 +1017,47 @@
             </div>
 
             <div class="space-y-4" id="faq-container">
-                <!-- FAQ item 1 -->
+                <!-- FAQ item 1 (Updated with user's specific note) -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden faq-item">
                     <button onclick="toggleFaq(this)" class="w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900">
                         <span class="faq-question">هل المخيم عسكري أو يعتمد على القسوة؟</span>
                         <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden p-5 text-sm text-slate-600 bg-white border-t border-slate-100 leading-relaxed">
-                        أبداً. نحن نرفض القسوة أو الإهانة أو العقاب البدني إطلاقاً. أسلوبنا يعتمد على "الحزم العطوف" (Firm & Kind) وعلى منهجية العلاج المعرفي السلوكي. نضع قواعد واضحة ونشجع الطفل على احترامها عبر التحفيز الإيجابي وتحمل العواقب الطبيعية لاختياراته في بيئة تسودها المودة والاحترام.
+                        أبداً، فلسفتنا الأساسية مبنية على "الحزم العطوف" (Firm & Kind) وعلى منهجية العلاج المعرفي السلوكي، ونرفض الإهانة أو الأذى. إلا إذا تمادى المشترك في سوء السلوك وتكرار التعدي أو مخالفة قواعد السلامة بشكل فج، فحينها نتخذ الإجراءات الحازمة واللازمة وفق اللائحة الانضباطية لضمان سلامة الجميع واستقامة المسار.
                     </div>
                 </div>
 
                 <!-- FAQ item 2 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden faq-item">
                     <button onclick="toggleFaq(this)" class="w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900">
-                        <span class="faq-question">كيف يمكنني التواصل مع ابني أثناء فترة المخيم؟</span>
+                        <span class="faq-question">كيف يمكنني التواصل مع ابني أثناء فترة المخيم الممتدة (3 إلى 6 أشهر)؟</span>
                         <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden p-5 text-sm text-slate-600 bg-white border-t border-slate-100 leading-relaxed">
-                        لتحقيق فاعلية "الديتوكس الرقمي" واستقلالية الطفل، يتم منع استخدام الهواتف الشخصية. ومع ذلك، يحصل ولي الأمر على تقرير مصور يومي عبر تطبيقنا الخاص، وتتاح مكالمة هاتفية أسبوعية منظمة بإشراف الأخصائي، مع وجود خط اتصال طوارئ متاح للأهل 24 ساعة.
+                        لتحقيق فاعلية "الديتوكس الرقمي" واستقلالية الطفل، يتم منع استخدام الهواتف الشخصية. ومع ذلك، يحصل ولي الأمر على تقرير مصور دوري عبر تطبيقنا الخاص، وزيارات عائلية مجدولة شهرياً بإشراف الأخصائيين، مع وجود خط اتصال طوارئ متاح للأهل على مدار 24 ساعة.
                     </div>
                 </div>
 
                 <!-- FAQ item 3 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden faq-item">
                     <button onclick="toggleFaq(this)" class="w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900">
-                        <span class="faq-question">ماذا لو رفض ابني البقاء وأصر على العودة للمنزل؟</span>
+                        <span class="faq-question">ماذا لو رفض المشترك البقاء وأصر على العودة للمنزل؟</span>
                         <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden p-5 text-sm text-slate-600 bg-white border-t border-slate-100 leading-relaxed">
-                        من الطبيعي جداً أن يشعر الطفل بمقاومة في أول 48 ساعة بسبب الحرمان من عاداته السابقة والشاشات. يتدخل فريقنا الإرشادي المتمرس عبر بروتوكول الاحتواء والتشتيت وتكليفه بمهام شيقة مع زملائه. 98% من الأطفال يندمجون تماماً بحلول اليوم الثالث ويصبحون فخورين بما يحققونه.
+                        من الطبيعي جداً أن يشعر المشترك بمقاومة في الأيام الأولى بسبب الحرمان من عاداته السابقة والشاشات. يتدخل فريقنا الإرشادي المتمرس عبر بروتوكول الاحتواء والتشتيت وتكليفه بمهام شيقة مع زملائه. 98% من المشتركين يندمجون تماماً بحلول الأسبوع الأول ويصبحون فخورين بما يحققونه.
                     </div>
                 </div>
 
                 <!-- FAQ item 4 -->
                 <div class="border border-slate-200 rounded-2xl overflow-hidden faq-item">
                     <button onclick="toggleFaq(this)" class="w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900">
-                        <span class="faq-question">هل يتم تقديم شهادة أو تقرير عند التخرج؟</span>
+                        <span class="faq-question">هل يتم تقديم شهادة أو تقرير عند التخرج بعد 3 أو 6 أشهر؟</span>
                         <i class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform"></i>
                     </button>
                     <div class="faq-answer hidden p-5 text-sm text-slate-600 bg-white border-t border-slate-100 leading-relaxed">
-                        نعم، في اليوم الختامي نحتفل بحفل تخرج رسمي بحضور أولياء الأمور، ويتسلم الطفل وسام التحدي وشهادة الإنجاز، بالإضافة إلى ملف تحليلي سلوكي كامل للأهل يتضمن خطة استرشادية للتعامل مع ابنهم في البيت والمدرسة.
+                        نعم، في ختام المسار نحتفل بحفل تخرج رسمي بحضور أولياء الأمور، ويتسلم المشترك وسام التحول والقيادة وشهادة إنجاز معتمدة، بالإضافة إلى ملف تحليلي سلوكي كامل للأهل يتضمن خطة استرشادية طويلة الأمد للتعامل معه في البيت والدراسة أو العمل.
                     </div>
                 </div>
             </div>
@@ -1071,14 +1067,14 @@
     <section id="register" class="py-20 bg-gradient-to-br from-brand-900 via-teal-900 to-navy-900 text-white relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-12">
-                <span class="bg-amber-400 text-navy-900 text-xs font-black px-4 py-1.5 rounded-full uppercase">
+                <span class="bg-amber-400 text-navy-900 text-xs font-black px-4 py-1.5 rounded-full uppercase" id="reg-badge">
                     خطوة أولى نحو التحول
                 </span>
-                <h2 class="text-3xl sm:text-5xl font-black mt-3 font-heading">
+                <h2 class="text-3xl sm:text-5xl font-black mt-3 font-heading" id="reg-heading">
                     طلب تقييم أولي وحجز مقعد
                 </h2>
-                <p class="text-slate-300 mt-2 text-sm sm:text-base">
-                    املأ البيانات التالية ليتواصل معك مستشارنا التربوي ويحدد مدى ملاءمة المخيم لاحتياجات ابنك مجاناً.
+                <p class="text-slate-300 mt-2 text-sm sm:text-base" id="reg-desc">
+                    املأ البيانات التالية ليتواصل معك مستشارنا التربوي ويحدد مدى ملاءمة المسار (3 إلى 6 أشهر) لاحتياجاتك أو احتياجات ابنك مجاناً.
                 </p>
             </div>
 
@@ -1086,89 +1082,99 @@
             <div class="glass-dark p-6 sm:p-10 rounded-3xl shadow-2xl border border-white/10">
                 <form id="evaluationForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Parent Name -->
+                        <!-- Parent/Applicant Name -->
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-2">اسم ولي الأمر الكريم</label>
-                            <input type="text" required placeholder="مثال: عبدالله القحطاني" class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500 transition">
+                            <label class="block text-xs font-bold text-slate-300 mb-2" id="lbl-parent-name">اسم مقدم الطلب / ولي الأمر</label>
+                            <input type="text" id="input-parent-name" required placeholder="مثال: عبدالله القحطاني" class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500 transition">
                         </div>
 
                         <!-- Phone number -->
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-2">رقم الجوال (واتساب للتواصل)</label>
-                            <input type="tel" required placeholder="05XXXXXXXX" class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500 transition text-right" dir="ltr">
+                            <label class="block text-xs font-bold text-slate-300 mb-2" id="lbl-phone">رقم الجوال (واتساب للتواصل)</label>
+                            <input type="tel" id="input-phone" required placeholder="05XXXXXXXX" class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500 transition text-right" dir="ltr">
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Child Name & Age -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Participant Name & Age -->
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-2">اسم الابن / الابنة والعمر</label>
-                            <input type="text" required placeholder="مثال: فهد (13 سنة)" class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500 transition">
+                            <label class="block text-xs font-bold text-slate-300 mb-2" id="lbl-child-name">اسم المشترك والعمر</label>
+                            <input type="text" id="input-child-name" required placeholder="مثال: فهد (15 سنة)" class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500 transition">
+                        </div>
+
+                        <!-- Preferred Duration (3 to 6 Months) -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 mb-2" id="lbl-duration">المدة التأهيلية المفضلة</label>
+                            <select id="select-duration" class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500 transition">
+                                <option value="3months" id="opt-dur-3">مسار مكثف (3 أشهر)</option>
+                                <option value="6months" id="opt-dur-6">مسار تحول متكامل (6 أشهر)</option>
+                                <option value="consult" id="opt-dur-consult">تحديد المدة بعد جلسة التقييم</option>
+                            </select>
                         </div>
 
                         <!-- City -->
                         <div>
-                            <label class="block text-xs font-bold text-slate-300 mb-2">المدينة / المنطقة</label>
-                            <select class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500 transition">
-                                <option value="riyadh">الرياض ومحافظاتها</option>
-                                <option value="jeddah">جدة ومكة المكرمة</option>
-                                <option value="eastern">المنطقة الشرقية</option>
-                                <option value="qassim">القصيم وحائل</option>
-                                <option value="south">عسير والمناطق الجنوبية</option>
-                                <option value="other">مناطق أخرى / دول الخليج</option>
+                            <label class="block text-xs font-bold text-slate-300 mb-2" id="lbl-city">المدينة / المنطقة</label>
+                            <select id="select-city" class="w-full bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500 transition">
+                                <option value="riyadh" id="opt-city-riyadh">الرياض ومحافظاتها</option>
+                                <option value="jeddah" id="opt-city-jeddah">جدة ومكة المكرمة</option>
+                                <option value="eastern" id="opt-city-eastern">المنطقة الشرقية</option>
+                                <option value="qassim" id="opt-city-qassim">القصيم وحائل</option>
+                                <option value="south" id="opt-city-south">عسير والمناطق الجنوبية</option>
+                                <option value="other" id="opt-city-other">مناطق أخرى / دول الخليج</option>
                             </select>
                         </div>
                     </div>
 
                     <!-- Challenges Checkboxes -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-3">ما هي أبرز السلوكيات التي ترغب في معالجتها؟ (اختر ما ينطبق)</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <label class="block text-xs font-bold text-slate-300 mb-3" id="lbl-challenges">ما هي أبرز السلوكيات أو التحديات المستهدفة؟ (اختر ما ينطبق)</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="challenges-grid">
                             <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 cursor-pointer text-xs transition">
                                 <input type="checkbox" name="challenge" value="screens" class="accent-brand-500 rounded w-4 h-4">
-                                <span>إدمان الشاشات والألعاب</span>
+                                <span class="challenge-label">إدمان الشاشات والألعاب الإلكترونية</span>
                             </label>
 
                             <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 cursor-pointer text-xs transition">
                                 <input type="checkbox" name="challenge" value="anger" class="accent-brand-500 rounded w-4 h-4">
-                                <span>العصبية والغضب السريع</span>
+                                <span class="challenge-label">العصبية الحادة وسرعة الغضب</span>
                             </label>
 
                             <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 cursor-pointer text-xs transition">
                                 <input type="checkbox" name="challenge" value="laziness" class="accent-brand-500 rounded w-4 h-4">
-                                <span>الكسل وتأجيل المهام</span>
+                                <span class="challenge-label">الكسل والتسويف وضعف الدافعية</span>
                             </label>
 
                             <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 cursor-pointer text-xs transition">
                                 <input type="checkbox" name="challenge" value="confidence" class="accent-brand-500 rounded w-4 h-4">
-                                <span>ضعف الثقة بالنفس أو الخجل</span>
+                                <span class="challenge-label">ضعف الثقة بالنفس والتردد</span>
                             </label>
 
                             <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 cursor-pointer text-xs transition">
                                 <input type="checkbox" name="challenge" value="stubborn" class="accent-brand-500 rounded w-4 h-4">
-                                <span>العناد وعدم الانصياع للنصح</span>
+                                <span class="challenge-label">العناد والتمرد على التوجيهات</span>
                             </label>
 
                             <label class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-brand-500 cursor-pointer text-xs transition">
-                                <input type="checkbox" name="challenge" value="social" class="accent-brand-500 rounded w-4 h-4">
-                                <span>صعوبة تكوين صداقات إيجابية</span>
+                                <input type="checkbox" name="challenge" value="identity" class="accent-brand-500 rounded w-4 h-4">
+                                <span class="challenge-label">تشوش الهوية وتأثير رفقاء السوء</span>
                             </label>
                         </div>
                     </div>
 
                     <!-- Notes -->
                     <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-2">ملاحظات إضافية يهمنا معرفتها (اختياري)</label>
-                        <textarea rows="3" placeholder="اكتب أي معلومات عن شخصيته أو حالته الصحية..." class="w-full bg-slate-800/80 border border-slate-700 rounded-xl p-4 text-white text-sm focus:outline-none focus:border-brand-500 transition"></textarea>
+                        <label class="block text-xs font-bold text-slate-300 mb-2" id="lbl-notes">ملاحظات إضافية يهمنا معرفتها (اختياري)</label>
+                        <textarea id="input-notes" rows="3" placeholder="اكتب أي تفاصيل عن طبيعة المشكلة، التاريخ السلوكي، أو الحالة الصحية..." class="w-full bg-slate-800/80 border border-slate-700 rounded-xl p-4 text-white text-sm focus:outline-none focus:border-brand-500 transition"></textarea>
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-teal-500 hover:from-brand-600 hover:to-teal-600 text-white font-black text-base shadow-glow transition active:scale-[0.99] flex items-center justify-center gap-2">
+                    <button type="submit" id="btn-submit-reg" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-teal-500 hover:from-brand-600 hover:to-teal-600 text-white font-black text-base shadow-glow transition active:scale-[0.99] flex items-center justify-center gap-2">
                         <i class="fa-solid fa-clipboard-check"></i>
                         <span>إرسال طلب التقييم السري وتأكيد الرغبة</span>
                     </button>
 
-                    <p class="text-center text-[11px] text-slate-400">
+                    <p class="text-center text-[11px] text-slate-400" id="txt-privacy-note">
                         <i class="fa-solid fa-lock ml-1 text-emerald-400"></i>
                         جميع المعلومات تعامل بسرية تامة وتخضع لميثاق الخصوصية المهنية للأخصائيين النفسيين.
                     </p>
@@ -1186,39 +1192,39 @@
                         <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center text-white text-xl">
                             <i class="fa-solid fa-compass"></i>
                         </div>
-                        <span class="text-2xl font-black text-white font-heading">مخيّم بَصمة</span>
+                        <span class="text-2xl font-black text-white font-heading" id="footer-brand-title">مخيّم بَصمة</span>
                     </div>
-                    <p class="text-xs leading-relaxed text-slate-400">
-                        المؤسسة الأولى المتخصصة في المخيمات التربوية التنموية المغلقة لإعادة بناء سلوك الأطفال وتأهيلهم ليكونوا قادة مبادرين في مجتمعهم وأسرهم.
+                    <p class="text-xs leading-relaxed text-slate-400" id="footer-brand-desc">
+                        المؤسسة الأولى المتخصصة في المخيمات التأهيلية السلوكية الممتدة (3 - 6 أشهر) لإعادة بناء السلوك، وصقل الشخصية القيادية، وتمكين الشباب واليافعين في مجتمعاتهم.
                     </p>
                 </div>
 
                 <!-- Col 2 -->
                 <div>
-                    <h4 class="text-white font-bold text-sm font-heading mb-4">روابط سريعة</h4>
-                    <ul class="space-y-2 text-xs">
-                        <li><a href="#about" class="hover:text-brand-400 transition">فلسفة التغيير الإيجابي</a></li>
-                        <li><a href="#experiences" class="hover:text-brand-400 transition">تسجيلات وقصص الفتية</a></li>
-                        <li><a href="#programs" class="hover:text-brand-400 transition">المسارات والأعمار المتاحة</a></li>
-                        <li><a href="#schedule" class="hover:text-brand-400 transition">جدول النشاط اليومي</a></li>
-                        <li><a href="#faq" class="hover:text-brand-400 transition">الأسئلة المتكررة</a></li>
+                    <h4 class="text-white font-bold text-sm font-heading mb-4" id="footer-links-title">روابط سريعة</h4>
+                    <ul class="space-y-2 text-xs" id="footer-links-list">
+                        <li><a href="#about" class="hover:text-brand-400 transition" id="footer-link-1">فلسفة التغيير الإيجابي</a></li>
+                        <li><a href="#experiences" class="hover:text-brand-400 transition" id="footer-link-2">تسجيلات وقصص الفتية</a></li>
+                        <li><a href="#programs" class="hover:text-brand-400 transition" id="footer-link-3">المسارات التأهيلية (3-6 أشهر)</a></li>
+                        <li><a href="#schedule" class="hover:text-brand-400 transition" id="footer-link-4">جدول النشاط اليومي</a></li>
+                        <li><a href="#faq" class="hover:text-brand-400 transition" id="footer-link-5">الأسئلة المتكررة</a></li>
                     </ul>
                 </div>
 
                 <!-- Col 3 -->
                 <div>
-                    <h4 class="text-white font-bold text-sm font-heading mb-4">معايير الاعتماد والترخيص</h4>
-                    <ul class="space-y-2 text-xs">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> معتمد من اتحاد المخيمات التنموية</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> بروتوكول سلامة معتمد من الدفاع المدني</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> كادر مرخص في الإرشاد الأسري والتربوي</li>
+                    <h4 class="text-white font-bold text-sm font-heading mb-4" id="footer-standards-title">معايير الاعتماد والترخيص</h4>
+                    <ul class="space-y-2 text-xs" id="footer-standards-list">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> <span id="footer-std-1">معتمد من اتحاد المخيمات التنموية</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> <span id="footer-std-2">بروتوكول سلامة معتمد من الدفاع المدني</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> <span id="footer-std-3">كادر مرخص في الإرشاد الأسري والتربوي</span></li>
                     </ul>
                 </div>
 
                 <!-- Col 4 -->
                 <div>
-                    <h4 class="text-white font-bold text-sm font-heading mb-4">تواصل مع الإدارة المركزية</h4>
-                    <p class="text-xs mb-3">يسعدنا استقبال استفساراتكم وترتيب زيارة تعريفية للمقر.</p>
+                    <h4 class="text-white font-bold text-sm font-heading mb-4" id="footer-contact-title">تواصل مع الإدارة المركزية</h4>
+                    <p class="text-xs mb-3" id="footer-contact-subtitle">يسعدنا استقبال استفساراتكم وترتيب زيارة تعريفية للمقر.</p>
                     <div class="space-y-2 text-xs">
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-phone text-brand-400"></i>
@@ -1230,18 +1236,18 @@
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-location-dot text-brand-400"></i>
-                            <span>المملكة العربية السعودية • الرياض</span>
+                            <span id="footer-location-txt">المملكة العربية السعودية • الرياض</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <div>جميع الحقوق محفوظة لمخيم بصمة للتطوير والتمكين القيادي © 2026</div>
+                <div id="footer-copyright">جميع الحقوق محفوظة لمخيم بصمة للتطوير والتمكين القيادي © 2026</div>
                 <div class="flex gap-4">
-                    <a href="#" class="hover:text-slate-300 transition">سياسة الخصوصية</a>
-                    <a href="#" class="hover:text-slate-300 transition">ميثاق حماية الطفل</a>
-                    <a href="#" class="hover:text-slate-300 transition">الشروط والأحكام</a>
+                    <a href="#" class="hover:text-slate-300 transition" id="footer-privacy-btn">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-slate-300 transition" id="footer-charter-btn">ميثاق حماية الطفل</a>
+                    <a href="#" class="hover:text-slate-300 transition" id="footer-terms-btn">الشروط والأحكام</a>
                 </div>
             </div>
         </div>
@@ -1257,38 +1263,38 @@
                 <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center mx-auto mb-3 text-xl">
                     <i class="fa-solid fa-ticket"></i>
                 </div>
-                <h3 class="text-2xl font-black text-navy-900 font-heading">حجز مقعد مبكر لطفلك</h3>
+                <h3 class="text-2xl font-black text-navy-900 font-heading" id="modal-title">حجز مقعد مبكر في المخيم (3 - 6 أشهر)</h3>
                 <p class="text-xs text-slate-500 mt-1" id="modalProgramName">أكاديمية التحول الإيجابي وبناء السلوك</p>
             </div>
             
             <form onsubmit="handleModalSubmit(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">اسم ولي الأمر</label>
-                    <input type="text" required placeholder="الاسم الكريم" class="w-full border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-brand-500">
+                    <label class="block text-xs font-bold text-slate-700 mb-1" id="modal-lbl-name">اسم ولي الأمر / المشترك</label>
+                    <input type="text" id="modal-input-name" required placeholder="الاسم الكريم" class="w-full border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-brand-500">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">رقم الجوال</label>
-                    <input type="tel" required placeholder="05XXXXXXXX" dir="ltr" class="w-full border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-brand-500 text-right">
+                    <label class="block text-xs font-bold text-slate-700 mb-1" id="modal-lbl-phone">رقم الجوال</label>
+                    <input type="tel" id="modal-input-phone" required placeholder="05XXXXXXXX" dir="ltr" class="w-full border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-brand-500 text-right">
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">عمر الطفل</label>
-                        <select class="w-full border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-brand-500">
-                            <option>8 - 10 سنوات</option>
-                            <option>11 - 13 سنة</option>
-                            <option>14 - 17 سنة</option>
+                        <label class="block text-xs font-bold text-slate-700 mb-1" id="modal-lbl-age">الفئة العمرية</label>
+                        <select id="modal-select-age" class="w-full border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-brand-500">
+                            <option id="m-age-1">9 - 12 سنة (الأشبال)</option>
+                            <option id="m-age-2">13 - 16 سنة (اليافعين)</option>
+                            <option id="m-age-3">17 - 35 سنة (الشباب والبالغين)</option>
                         </select>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">الفترة المفضلة</label>
-                        <select class="w-full border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-brand-500">
-                            <option>الفوج القادم (عطلة نهاية الفصل)</option>
-                            <option>المخيم الصيفي المكثف</option>
+                        <label class="block text-xs font-bold text-slate-700 mb-1" id="modal-lbl-term">المدة المستهدفة</label>
+                        <select id="modal-select-term" class="w-full border border-slate-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-brand-500">
+                            <option id="m-term-1">مسار 3 أشهر مكثف</option>
+                            <option id="m-term-2">مسار 6 أشهر شامل</option>
                         </select>
                     </div>
                 </div>
 
-                <button type="submit" class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl text-sm shadow-md transition mt-2">
+                <button type="submit" id="modal-btn-submit" class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl text-sm shadow-md transition mt-2">
                     تأكيد حجز التقييم المبدئي
                 </button>
             </form>
@@ -1340,7 +1346,7 @@
                 heroStatCompleted: "طفل ويافع أتموا المخيم بنجاح",
                 heroStatImprovement: "نسبة تحسن ملحوظ في سلوك الأبناء",
                 heroStatRatio: "مشرف متخصص لكل 5 أطفال",
-                heroCardBadgeTop: "14 يوماً تصنع فارق العمر",
+                heroCardBadgeTop: "مسارات من 3 إلى 6 أشهر تصنع فارق العمر",
                 heroCardBadgeMid: "تحول حقيقي، ليس مجرد نزهة",
                 heroCardQuote: "“تعلمت أن غضبي لن يحل مشاكلي، وأن قوتي الحقيقية في قدرتي على مساعدة زملائي”",
                 heroCardName: "ريّان المحمود (13 سنة)",
@@ -1449,22 +1455,37 @@
                     { time: "05:30", label: "مساءً", title: "حلقة الحوار التفاعلي (دائرة الشجاعة)", desc: "جلسة آمنة مع الأخصائي النفسي لمناقشة مواقف اليوم، كيف تحكم المشاركون في مشاعرهم، وتصحيح الأخطاء دون لوم." },
                     { time: "08:00", label: "ليلاً", title: "أمسية السمر والامتنان والنوم المبكر (09:30)", desc: "مشاركة لحظات الشكر بين الزملاء حول نار المخيم، ثم إطفاء الأنوار لنوم عميق يعيد ضبط إيقاع الجسم الحيوي." }
                 ],
-                // Programs
-                progTag: "المسارات التدريبية",
-                progTitle: "برامج مخصصة حسب الفئة العمرية ونوع التحدي",
-                progDesc: "يتم فرز المشتركين في مجموعات صغيرة متقاربة بالعمر والاحتياج السلوكي لضمان أعلى فائدة.",
+                // Programs (Updated to 3-6 Months & 17-35 Years)
+                progTag: "المسارات التأهيلية الممتدة",
+                progTitle: "برامج ممتدة من 3 إلى 6 أشهر تضمن التحول الجذري المستدام",
+                progDesc: "نقدم مسارات متكاملة تراعي التطور العمري والنفسي، مع تنوع في الأنشطة بين الديتوكس السلوكي، وتطوير المهارات القيادية، وبناء الانضباط الحياتي.",
                 pCard1Badge: "الفئة: 9 - 12 سنة",
-                pCard1Title: "مخيم \"البطل الصغير\"",
-                pCard1Desc: "يركز على تقليل التعلق بالأجهزة، تحفيز التركيز، زرع آداب الاستئذان، تنظيم الغرفة والملابس، وبناء الثقة في التواصل مع الأقران.",
+                pCard1Title: "مخيم \"البطل الصغير\" (3 - 6 أشهر)",
+                pCard1Desc: "برنامج مرحلي يدمج بين فترات المعايشة والتعليم التفاعلي لغرس العادات السليمة وبناء الثقة وفصل الطفل تماماً عن الإدمان الرقمي.",
+                pCard1Features: [
+                    "المدة: مسار مكثف 3 أشهر أو مسار تحول شامل 6 أشهر",
+                    "تنوع المسارات: نادي الفنون الحرفية، تحديات الكشافة، والسباحة والفروسية",
+                    "علاج نوبات التشبث والغضب ورفع التركيز والانضباط المدرسي"
+                ],
                 pCard1Btn: "طلب تسجيل في هذا المسار",
                 pCard2BadgeTop: "الأكثر طلباً للتحول الإيجابي",
                 pCard2Badge: "الفئة: 13 - 16 سنة",
-                pCard2Title: "مخيم \"قادة المستقبل\"",
-                pCard2Desc: "صُمم خصيصاً لمرحلة المراهقة والتحديات المصاحبة لها: العناد، الانعزال، ضغط الأصدقاء، وغياب الدافع الدراسي.",
+                pCard2Title: "مخيم \"قادة المستقبل\" (3 - 6 أشهر)",
+                pCard2Desc: "معايشة كاملة ممتدة صُممت لتجاوز أزمات المراهقة، والعناد، وتكوين الهوية الإيجابية، وصناعة شخصية تتحمل المسؤولية وتعتمد على نفسها.",
+                pCard2Features: [
+                    "المدة: ترم كامل (3 إلى 6 أشهر) بمعسكرات تدريبية متتابعة",
+                    "تنوع الأنشطة: محاكاة القيادة، الروبوتيكس، مهارات البقاء، والخطابة",
+                    "جلسات علاج سلوكي معرفي فردية مكثفة مع إرشاد أسري موازٍ"
+                ],
                 pCard2Btn: "احجز مقعداً في الفوج القادم",
-                pCard3Badge: "الفئة: 14 - 17 سنة",
-                pCard3Title: "تحدي \"المرونة والصمود\"",
-                pCard3Desc: "برنامج مكثف للفتية الذين يحتاجون تعزيز الثقة بمواجهة الصعاب الحقيقية، والاعتماد التام على الذات في ظروف الطبيعة الجبلية والصحراوية.",
+                pCard3Badge: "الفئة: 17 - 35 سنة (الشباب والبالغين)",
+                pCard3Title: "أكاديمية الانضباط واستعادة الفطرة (3 - 6 أشهر)",
+                pCard3Desc: "مسار متخصص ومكثف للشباب والرجال البالغين للتخلص من الإدمانات الرقمية والعادات الهدامة، واستعادة البوصلة الفطرية والمهنية.",
+                pCard3Features: [
+                    "المدة: مسار تأهيلي من 3 إلى 6 أشهر بانضباط عالٍ",
+                    "تنوع المسارات: التدريب البدني التكتيكي، التخطيط المهني والمالي، وتطوير الرجولة المسؤولة",
+                    "ديتوكس رقمي كامل وجلسات فردية لتفكيك صدمات وعقد الماضي والمحبطين"
+                ],
                 pCard3Btn: "طلب تسجيل في هذا المسار",
                 // Team & Safety
                 teamTag: "أمان ورعاية لا مثيل لها",
@@ -1485,89 +1506,145 @@
                 tStat3Num: "3 وجبات",
                 tStat3Title: "تغذية متوازنة عضوية",
                 tStat3Desc: "وجبات طازجة لتعزيز النشاط وتقليل التوتر",
-                tStat4Num: "90 يوماً",
-                tStat4Title: "متابعة بعد انتهاء المعسكر",
-                tStat4Desc: "لضمان ثبات السلوك الجديد في البيئة المنزلية",
-                // FAQ
+                tStat4Num: "3-6 أشهر",
+                tStat4Title: "مدة البرنامج التأهيلي",
+                tStat4Desc: "تحول سلوكي راسخ ومستدام في نمط الحياة",
+                // FAQ (Updated with user's specific note)
                 faqTag: "إجابات لراحة بالك",
                 faqTitle: "الأسئلة الأكثر شيوعاً بين أولياء الأمور",
                 faqs: [
                     {
                         q: "هل المخيم عسكري أو يعتمد على القسوة؟",
-                        a: "أبداً. نحن نرفض القسوة أو الإهانة أو العقاب البدني إطلاقاً. أسلوبنا يعتمد على \"الحزم العطوف\" (Firm & Kind) وعلى منهجية العلاج المعرفي السلوكي. نضع قواعد واضحة ونشجع الطفل على احترامها عبر التحفيز الإيجابي وتحمل العواقب الطبيعية لاختياراته في بيئة تسودها المودة والاحترام."
+                        a: "أبداً، فلسفتنا الأساسية مبنية على \"الحزم العطوف\" (Firm & Kind) وعلى منهجية العلاج المعرفي السلوكي، ونرفض الإهانة أو الأذى. إلا إذا تمادى المشترك في سوء السلوك وتكرار التعدي أو مخالفة قواعد السلامة بشكل فج، فحينها نتخذ الإجراءات الحازمة واللازمة وفق اللائحة الانضباطية لضمان سلامة الجميع واستقامة المسار."
                     },
                     {
-                        q: "كيف يمكنني التواصل مع ابني أثناء فترة المخيم؟",
-                        a: "لتحقيق فاعلية \"الديتوكس الرقمي\" واستقلالية الطفل، يتم منع استخدام الهواتف الشخصية. ومع ذلك، يحصل ولي الأمر على تقرير مصور يومي عبر تطبيقنا الخاص، وتتاح مكالمة هاتفية أسبوعية منظمة بإشراف الأخصائي، مع وجود خط اتصال طوارئ متاح للأهل 24 ساعة."
+                        q: "كيف يمكنني التواصل مع ابني أثناء فترة المخيم الممتدة (3 إلى 6 أشهر)؟",
+                        a: "لتحقيق فاعلية \"الديتوكس الرقمي\" واستقلالية الطفل، يتم منع استخدام الهواتف الشخصية. ومع ذلك، يحصل ولي الأمر على تقرير مصور دوري عبر تطبيقنا الخاص، وزيارات عائلية مجدولة شهرياً بإشراف الأخصائيين، مع وجود خط اتصال طوارئ متاح للأهل على مدار 24 ساعة."
                     },
                     {
-                        q: "ماذا لو رفض ابني البقاء وأصر على العودة للمنزل؟",
-                        a: "من الطبيعي جداً أن يشعر الطفل بمقاومة في أول 48 ساعة بسبب الحرمان من عاداته السابقة والشاشات. يتدخل فريقنا الإرشادي المتمرس عبر بروتوكول الاحتواء والتشتيت وتكليفه بمهام شيقة مع زملائه. 98% من الأطفال يندمجون تماماً بحلول اليوم الثالث ويصبحون فخورين بما يحققونه."
+                        q: "ماذا لو رفض المشترك البقاء وأصر على العودة للمنزل؟",
+                        a: "من الطبيعي جداً أن يشعر المشترك بمقاومة في الأيام الأولى بسبب الحرمان من عاداته السابقة والشاشات. يتدخل فريقنا الإرشادي المتمرس عبر بروتوكول الاحتواء والتشتيت وتكليفه بمهام شيقة مع زملائه. 98% من المشتركين يندمجون تماماً بحلول الأسبوع الأول ويصبحون فخورين بما يحققونه."
                     },
                     {
-                        q: "هل يتم تقديم شهادة أو تقرير عند التخرج؟",
-                        a: "نعم، في اليوم الختامي نحتفل بحفل تخرج رسمي بحضور أولياء الأمور، ويتسلم الطفل وسام التحدي وشهادة الإنجاز، بالإضافة إلى ملف تحليلي سلوكي كامل للأهل يتضمن خطة استرشادية للتعامل مع ابنهم في البيت والمدرسة."
+                        q: "هل يتم تقديم شهادة أو تقرير عند التخرج بعد 3 أو 6 أشهر؟",
+                        a: "نعم، في ختام المسار نحتفل بحفل تخرج رسمي بحضور أولياء الأمور، ويتسلم المشترك وسام التحول والقيادة وشهادة إنجاز معتمدة، بالإضافة إلى ملف تحليلي سلوكي كامل للأهل يتضمن خطة استرشادية طويلة الأمد للتعامل معه في البيت والدراسة أو العمل."
                     }
                 ],
-                // Register
+                // Register Section (Full bilingual labels & options)
                 regTag: "خطوة أولى نحو التحول",
                 regTitle: "طلب تقييم أولي وحجز مقعد",
-                regDesc: "املأ البيانات التالية ليتواصل معك مستشارنا التربوي ويحدد مدى ملاءمة المخيم لاحتياجات ابنك مجاناً.",
-                regParentLabel: "اسم ولي الأمر الكريم",
+                regDesc: "املأ البيانات التالية ليتواصل معك مستشارنا التربوي ويحدد مدى ملاءمة المسار (3 إلى 6 أشهر) لاحتياجاتك أو احتياجات ابنك مجاناً.",
+                regParentLabel: "اسم مقدم الطلب / ولي الأمر",
                 regParentPlaceholder: "مثال: عبدالله القحطاني",
                 regPhoneLabel: "رقم الجوال (واتساب للتواصل)",
-                regChildLabel: "اسم الابن / الابنة والعمر",
-                regChildPlaceholder: "مثال: فهد (13 سنة)",
+                regChildLabel: "اسم المشترك والعمر",
+                regChildPlaceholder: "مثال: فهد (15 سنة)",
+                regDurationLabel: "المدة التأهيلية المفضلة",
+                regDurationOptions: [
+                    "مسار مكثف (3 أشهر)",
+                    "مسار تحول متكامل (6 أشهر)",
+                    "تحديد المدة بعد جلسة التقييم"
+                ],
                 regCityLabel: "المدينة / المنطقة",
-                regChallengesLabel: "ما هي أبرز السلوكيات التي ترغب في معالجتها؟ (اختر ما ينطبق)",
+                regCityOptions: [
+                    "الرياض ومحافظاتها",
+                    "جدة ومكة المكرمة",
+                    "المنطقة الشرقية",
+                    "القصيم وحائل",
+                    "عسير والمناطق الجنوبية",
+                    "مناطق أخرى / دول الخليج"
+                ],
+                regChallengesLabel: "ما هي أبرز السلوكيات أو التحديات المستهدفة؟ (اختر ما ينطبق)",
+                regChallenges: [
+                    "إدمان الشاشات والألعاب الإلكترونية",
+                    "العصبية الحادة وسرعة الغضب",
+                    "الكسل والتسويف وضعف الدافعية",
+                    "ضعف الثقة بالنفس والتردد",
+                    "العناد والتمرد على التوجيهات",
+                    "تشوش الهوية وتأثير رفقاء السوء"
+                ],
                 regNotesLabel: "ملاحظات إضافية يهمنا معرفتها (اختياري)",
-                regNotesPlaceholder: "اكتب أي معلومات عن شخصيته أو حالته الصحية...",
+                regNotesPlaceholder: "اكتب أي تفاصيل عن طبيعة المشكلة، التاريخ السلوكي، أو الحالة الصحية...",
                 regSubmitBtn: "إرسال طلب التقييم السري وتأكيد الرغبة",
                 regPrivacyNote: "جميع المعلومات تعامل بسرية تامة وتخضع لميثاق الخصوصية المهنية للأخصائيين النفسيين.",
+                // Footer
+                footerBrandTitle: "مخيّم بَصمة",
+                footerBrandDesc: "المؤسسة الأولى المتخصصة في المخيمات التأهيلية السلوكية الممتدة (3 - 6 أشهر) لإعادة بناء السلوك، وصقل الشخصية القيادية، وتمكين الشباب واليافعين في مجتمعاتهم.",
+                footerLinksTitle: "روابط سريعة",
+                footerLinks: [
+                    "فلسفة التغيير الإيجابي",
+                    "تسجيلات وقصص الفتية",
+                    "المسارات التأهيلية (3-6 أشهر)",
+                    "جدول النشاط اليومي",
+                    "الأسئلة المتكررة"
+                ],
+                footerStandardsTitle: "معايير الاعتماد والترخيص",
+                footerStandards: [
+                    "معتمد من اتحاد المخيمات التنموية",
+                    "بروتوكول سلامة معتمد من الدفاع المدني",
+                    "كادر مرخص في الإرشاد الأسري والتربوي"
+                ],
+                footerContactTitle: "تواصل مع الإدارة المركزية",
+                footerContactSubtitle: "يسعدنا استقبال استفساراتكم وترتيب زيارة تعريفية للمقر.",
+                footerLocation: "المملكة العربية السعودية • الرياض",
+                footerCopyright: "جميع الحقوق محفوظة لمخيم بصمة للتطوير والتمكين القيادي © 2026",
+                footerPrivacyBtn: "سياسة الخصوصية",
+                footerCharterBtn: "ميثاق حماية المشاركين",
+                footerTermsBtn: "الشروط والأحكام",
                 // Modal
-                modalTitle: "حجز مقعد مبكر لطفلك",
+                modalTitle: "حجز مقعد مبكر في المخيم (3 - 6 أشهر)",
                 modalDefaultSub: "أكاديمية التحول الإيجابي وبناء السلوك",
-                modalParentLabel: "اسم ولي الأمر",
+                modalParentLabel: "اسم ولي الأمر / المشترك",
+                modalParentPlaceholder: "الاسم الكريم",
                 modalPhoneLabel: "رقم الجوال",
-                modalAgeLabel: "عمر الطفل",
-                modalPeriodLabel: "الفترة المفضلة",
+                modalAgeLabel: "الفئة العمرية",
+                modalAgeOptions: [
+                    "9 - 12 سنة (الأشبال)",
+                    "13 - 16 سنة (اليافعين)",
+                    "17 - 35 سنة (الشباب والبالغين)"
+                ],
+                modalTermLabel: "المدة المستهدفة",
+                modalTermOptions: [
+                    "مسار 3 أشهر مكثف",
+                    "مسار 6 أشهر شامل"
+                ],
                 modalSubmitBtn: "تأكيد حجز التقييم المبدئي",
                 // Toast
                 toastSuccessTitle: "تم استلام طلبكم بنجاح!",
-                toastSuccessDesc: "سيتواصل معكم المستشار التربوي خلال 24 ساعة عبر الواتساب.",
+                toastSuccessDesc: "سيتواصل معكم المستشار التربوي خلال 24 ساعة عبر الواتساب لتحديد موعد التقييم.",
                 modalSuccessTitle: "تم حجز المقعد المبدئي!",
-                modalSuccessDesc: "تم إرسال تفاصيل الفوج وموقع المخيم إلى رقم الجوال المسجل."
+                modalSuccessDesc: "تم إرسال تفاصيل المسار التأهيلي وموقع المخيم إلى رقم الجوال المسجل."
             },
             en: {
                 pageTitle: "Basma Camp | Empowering Positive Change & Tomorrow's Leaders",
                 langToggleText: "العربية",
                 mobileLangText: "Switch to Arabic (العربية)",
                 mobileLangBadge: "AR",
-                topAnnouncement: "Registration for the upcoming holiday cohort is now open (Limited to 45 participants for personalized focus)",
-                topCta: "Book a Child Assessment",
+                topAnnouncement: "Registration for the upcoming extended cohort is open (Limited to 45 participants for maximum 1-on-1 focus)",
+                topCta: "Book a Participant Assessment",
                 brandTitle: "Basma <span class='text-brand-600'>Camp</span>",
                 brandSubtitle: "Leadership Transformation & Behavioral Academy",
                 navAbout: "Philosophy",
-                navPrograms: "Programs",
-                navExperiences: "Youth Stories",
-                navSchedule: "Daily Schedule",
-                navTeam: "Mentors & Team",
+                navPrograms: "Programs (3-6 Mo)",
+                navExperiences: "Stories",
+                navSchedule: "Daily Routine",
+                navTeam: "Mentors & Safety",
                 navFaq: "FAQ",
-                navEnroll: "Enroll Your Child",
+                navEnroll: "Apply Now",
                 mNavExpBadge: "Featured",
                 // Hero Section
                 heroSafetyBadge: "100% Safe Environment Supervised by Certified Psychologists & Educators",
-                heroHeading: "We don't change your child's core personality, <br><span class='text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-teal-600 to-amber-500'>We awaken their best version!</span>",
-                heroDesc: "An immersive developmental camp combining self-discipline, screen detox, emotional expression, and outdoor challenges—so your child returns more confident, respectful, and resilient.",
-                heroBadgeDetox: "Digital Detox (Screen-Free)",
+                heroHeading: "We don't change who you are, <br><span class='text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-teal-600 to-amber-500'>We awaken your finest version!</span>",
+                heroDesc: "An immersive 3 to 6-month developmental camp combining disciplined conditioning, digital detox, emotional mastery, and wilderness resilience—so participants return confident, grounded, and purpose-driven.",
+                heroBadgeDetox: "Digital Detox (Complete Screen Cleanse)",
                 heroBadgeLeader: "Leadership Drills & Self-Reliance",
                 heroBadgeTherapy: "Emotional Release & Behavioral Counseling",
-                heroBtnEnroll: "Reserve a Spot in the Next Cohort",
+                heroBtnEnroll: "Reserve Your Seat in the Next Cohort",
                 heroBtnListen: "Hear From the Participants",
-                heroStatCompleted: "Youth successfully graduated",
-                heroStatImprovement: "Reported positive behavioral growth",
-                heroStatRatio: "Certified mentor per 5 children",
-                heroCardBadgeTop: "14 Days That Shape a Lifetime",
+                heroStatCompleted: "Youth & adults graduated successfully",
+                heroStatImprovement: "Reported lasting positive behavioral change",
+                heroStatRatio: "Specialist mentor per 5 participants",
+                heroCardBadgeTop: "3 to 6-Month Immersive Journey",
                 heroCardBadgeMid: "Real Transformation, Not Just a Trip",
                 heroCardQuote: "“I learned that anger will never solve my problems, and my real strength comes from lifting up my peers.”",
                 heroCardName: "Rayan Al-Mahmoud (13 yrs)",
@@ -1577,19 +1654,19 @@
                 heroFloatingTitle: "Cognitive Behavioral Therapy (CBT) combined with adventure",
                 // Pillars Section
                 aboutTag: "Four Pillars of Transformation",
-                aboutTitle: "How do we help your child overcome behavioral hurdles?",
-                aboutDesc: "We never use shouting or punishment; we provide a structured environment that fosters internal motivation and helps kids take pride in their choices.",
+                aboutTitle: "How do we help participants overcome deep-seated behavioral challenges?",
+                aboutDesc: "We never rely on shouting; we build an immersive structured sanctuary that fosters internal drive, emotional composure, and proud self-ownership.",
                 p1Title: "Daily Self-Discipline",
-                p1Desc: "Early rising, maintaining personal quarters, and sticking to schedules so kids learn that self-discipline is the true key to freedom and achievement.",
+                p1Desc: "Early rising, meticulous personal quarter inspections, and sticking to rigorous schedules so participants learn that disciplined habits unlock freedom.",
                 p2Title: "Emotional Expression & Anger Management",
-                p2Desc: "Daily workshops guided by child psychologists to understand triggers, express frustration without hostility, and resolve conflicts through dialogue.",
+                p2Desc: "Daily psychological workshops to understand deep triggers, express frustration constructively without hostility, and resolve conflicts via calm dialogue.",
                 p3Title: "Teamwork & Shared Responsibility",
-                p3Desc: "Endurance tasks and cooperative challenges that only succeed when everyone pitches in, replacing self-absorption with empathy and leadership.",
+                p3Desc: "Endurance tasks and team challenges that only succeed when everyone cooperates, breaking chronic isolation, ego, and passivity.",
                 p4Title: "Sustainability & 90-Day Family Follow-up",
-                p4Desc: "Transformation continues after camp: we provide a 90-day structured parental guide and weekly check-ins to anchor new habits at home and school.",
+                p4Desc: "Transformation endures: we provide a structured home integration roadmap and weekly coaching check-ins to solidify positive habits permanently.",
                 // Stories Section
                 expTag: "Their Voices Tell The Story",
-                expTitle: "Youth Experiences: How We Changed",
+                expTitle: "Participant Experiences: How We Truly Changed",
                 expDesc: "Listen to and read the authentic words of youth and young men who took the challenge—from the fear of leaving their comfort zones to the joy of triumph.",
                 filterAll: "All Stories",
                 filterScreen: "Screen & Gaming Detox",
@@ -1606,7 +1683,7 @@
                 k1BeforeDesc: "10 hours daily glued to screens",
                 k1AfterLabel: "After Camp:",
                 k1AfterDesc: "1 strictly scheduled hour & daily fitness routine",
-                // Kid 2 (Mohammed Baksari - Updated with Exact Requested Text)
+                // Kid 2 (Mohammed Baksari - 29 yrs)
                 k2Name: "Mohammed Baksari",
                 k2Meta: "29 yrs • Adult Empowerment & Natural Alignment Cohort",
                 k2Tag: "Overcoming the Past & Identity Restoration",
@@ -1676,94 +1753,165 @@
                     { time: "05:30", label: "PM", title: "Circle of Courage (Guided Dialogue)", desc: "A safe psychological forum facilitated by our clinical mentor to dissect the day's experiences, emotional control, and resolving friction without blame." },
                     { time: "08:00", label: "PM", title: "Campfire Gratitude & Lights Out (09:30)", desc: "Sharing moments of peer gratitude around the campfire, followed by lights-out for restorative sleep that resets natural circadian rhythms." }
                 ],
-                // Programs
-                progTag: "Targeted Pathways",
-                progTitle: "Programs Tailored to Age & Behavioral Needs",
-                progDesc: "Participants are assigned into small peer groups matched by age and behavioral goals to ensure focused mentorship.",
+                // Programs (3 to 6 Months & 17 - 35 Years)
+                progTag: "Extended Developmental Tracks",
+                progTitle: "Comprehensive 3 to 6-Month Programs Ensuring Lasting Life Change",
+                progDesc: "We provide holistic developmental tracks matched to age and psychological needs, featuring varied paths across digital detox, leadership, and personal resilience.",
                 pCard1Badge: "Age: 9 - 12 Years",
-                pCard1Title: "“Young Champion” Camp",
-                pCard1Desc: "Focuses on breaking screen attachment, boosting attention span, bedroom cleanliness, polite etiquette, and making healthy friends.",
+                pCard1Title: "“Young Champion” Camp (3 - 6 Months)",
+                pCard1Desc: "A phased program blending residential immersion and interactive mentorship to instill strong habits, boost focus, and break screen dependency.",
+                pCard1Features: [
+                    "Duration: 3-month Intensive or 6-month Immersive Transformation",
+                    "Varied Tracks: Handcrafts studio, scout challenges, swimming & equestrian",
+                    "Resolution of tantrums, defiance, and poor school engagement"
+                ],
                 pCard1Btn: "Apply for Young Champion",
-                pCard2BadgeTop: "Most Popular Pathway",
+                pCard2BadgeTop: "Most Requested Transformation",
                 pCard2Badge: "Age: 13 - 16 Years",
-                pCard2Title: "“Future Leaders” Camp",
-                pCard2Desc: "Crafted specifically for teenage crossroads: stubbornness, digital addiction, negative peer pressure, and lack of school motivation.",
+                pCard2Title: "“Future Leaders” Camp (3 - 6 Months)",
+                pCard2Desc: "A complete multi-month residential experience designed to tackle adolescent crossroads, rebellion, identity confusion, and lack of ambition.",
+                pCard2Features: [
+                    "Duration: Full academic term (3 to 6 months) with phased outdoor modules",
+                    "Diverse Disciplines: Executive leadership, robotics, survival, & public speaking",
+                    "Individual CBT therapy and parallel monthly parent coaching"
+                ],
                 pCard2Btn: "Reserve Spot in Future Leaders",
-                pCard3Badge: "Age: 14 - 17 Years",
-                pCard3Title: "“Grit & Resilience” Challenge",
-                pCard3Desc: "An intensive outdoor immersion for teens who need self-reliance, wilderness problem-solving, and emotional toughness in nature.",
-                pCard3Btn: "Apply for Grit & Resilience",
+                pCard3Badge: "Age: 17 - 35 Years (Young Men & Adults)",
+                pCard3Title: "Discipline & Identity Restoration Academy (3 - 6 Months)",
+                pCard3Desc: "A specialized, high-accountability track for young men and adults to conquer destructive digital addictions, toxic influences, and reclaim purpose.",
+                pCard3Features: [
+                    "Duration: 3 to 6-month rigorous developmental and coaching track",
+                    "Varied Paths: Tactical physical conditioning, career planning, & honorable manhood",
+                    "Total digital cleanse and 1-on-1 counseling to dismantle past trauma and negative peer guilt"
+                ],
+                pCard3Btn: "Apply for Adult Academy",
                 // Team & Safety
                 teamTag: "Safety & Uncompromising Care",
-                teamTitle: "Who will be guiding and caring for your child?",
-                teamDesc: "We recognize the immense trust you place in us; our team undergoes rigorous background checks, psychological screenings, and certified child-safeguarding protocols.",
+                teamTitle: "Who will be guiding and caring for your child or young adult?",
+                teamDesc: "We recognize the immense trust placed in our academy; our team undergoes rigorous background checks, psychological screenings, and child-safeguarding certifications.",
                 tItem1Title: "Licensed Resident Psychologists",
-                tItem1Desc: "Licensed clinical practitioners skilled in adolescent anxiety, emotional regulation, and behavioral adaptation.",
-                tItem2Title: "Daily Secure Parent Portal",
-                tItem2Desc: "Daily photo/video summaries and evening progress logs sent directly to parents without breaking the child's independence.",
-                tItem3Title: "On-site Clinic & Standby Ambulance",
-                tItem3Desc: "24/7 registered nursing staff with direct emergency clearance alongside the nearest regional central hospital.",
+                tItem1Desc: "Licensed clinical practitioners skilled in adolescent and adult behavioral adaptation.",
+                tItem2Title: "Continuous Family Updates & Scheduled Visits",
+                tItem2Desc: "Periodic photo summaries and scheduled monthly family check-ins without disrupting individual independence.",
+                tItem3Title: "On-site Medical Station & Standby Transport",
+                tItem3Desc: "24/7 medical staff with direct emergency clearance alongside the nearest central hospital.",
                 tStat1Num: "100%",
                 tStat1Title: "Smartphone-Free Zone",
-                tStat1Desc: "Restoring organic human eye-contact & conversation",
+                tStat1Desc: "Restoring real face-to-face human connection",
                 tStat2Num: "12 Cohorts",
                 tStat2Title: "Proven Track Record",
                 tStat2Desc: "Continuously refined mentorship methodologies",
                 tStat3Num: "3 Meals",
-                tStat3Title: "Organic Balanced Nutrition",
+                tStat3Title: "Wholesome Nutrition",
                 tStat3Desc: "Fresh whole foods designed to lower hyperactivity",
-                tStat4Num: "90 Days",
-                tStat4Title: "Post-Camp Parent Guidance",
-                tStat4Desc: "Securing lasting positive behavior at home",
-                // FAQ
+                tStat4Num: "3-6 Months",
+                tStat4Title: "Program Duration",
+                tStat4Desc: "Deep and lasting life transformation",
+                // FAQ (Updated with user's specific note in English)
                 faqTag: "Answers For Your Peace of Mind",
-                faqTitle: "Frequently Asked Questions By Parents",
+                faqTitle: "Frequently Asked Questions By Parents & Guardians",
                 faqs: [
                     {
                         q: "Is the camp military-style or reliant on harshness?",
-                        a: "Never. We strictly reject harshness, humiliation, or physical punishment. Our approach is rooted in 'Firm & Kind' discipline and Cognitive Behavioral Therapy (CBT). We establish clear boundaries and motivate participants through positive reinforcement and natural accountability in an environment of mutual respect and compassion."
+                        a: "Never. Our foundational philosophy is rooted in 'Firm & Kind' guidance and Cognitive Behavioral Therapy (CBT), and we strictly reject humiliation or harm. However, unless a participant misbehaves severely or persistently violates core rules, then we firmly do the needful and enforce strict corrective disciplinary measures according to our behavioral charter to maintain safety and order."
                     },
                     {
-                        q: "How can I communicate with my son during the camp?",
-                        a: "To ensure the full benefit of our digital detox and foster true independence, personal smartphones are prohibited. However, parents receive daily photo and video logs through our private portal, a weekly scheduled phone call supervised by the mentor, and a 24/7 emergency dispatch line directly to camp leadership."
+                        q: "How can I communicate with my child or ward during the 3 to 6-month period?",
+                        a: "To preserve the effectiveness of our digital detox and foster true independence, personal smartphones remain strictly off-limits. However, guardians receive scheduled progress logs and multimedia updates via our portal, along with scheduled monthly family visits and a 24/7 direct emergency line."
                     },
                     {
-                        q: "What if my child resists staying and demands to go home?",
-                        a: "It is completely natural for participants to experience resistance during the first 48 hours due to screen withdrawal and new boundaries. Our experienced counselors utilize certified containment and de-escalation protocols, pairing them with stimulating peer activities. Over 98% of attendees fully integrate by Day 3 and take immense pride in their achievements."
+                        q: "What if a participant resists staying and demands to leave?",
+                        a: "Initial resistance is completely natural during the first week as participants adapt to healthy boundaries without digital escapism. Our behavioral team utilizes proven de-escalation protocols and engaging group responsibilities. Over 98% of attendees fully adapt within days and take immense pride in their progress."
                     },
                     {
-                        q: "Is there a certificate or behavioral evaluation upon graduation?",
-                        a: "Yes. On the final day, we hold a graduation ceremony attended by parents where participants receive the Camp Medal of Resilience and an Achievement Certificate. Parents also receive a comprehensive behavioral report along with a 90-day home integration blueprint."
+                        q: "Is an official credential or evaluation provided upon graduation after 3 or 6 months?",
+                        a: "Yes. We host a formal graduation ceremony attended by families where participants are awarded the Camp Medal of Resilience and an accredited Leadership Certificate, along with a comprehensive behavioral roadmap for continued success at home, school, or career."
                     }
                 ],
-                // Register
+                // Register Section (Full English)
                 regTag: "The First Step Toward Growth",
-                regTitle: "Free Assessment & Registration Request",
-                regDesc: "Fill in the details below and one of our family counselors will reach out to evaluate your child's needs confidentially.",
-                regParentLabel: "Guardian / Parent Full Name",
+                regTitle: "Free Initial Assessment & Reservation Request",
+                regDesc: "Fill in the details below and one of our senior family advisors will contact you to evaluate suitability for the 3 to 6-month program confidentially.",
+                regParentLabel: "Applicant / Guardian Full Name",
                 regParentPlaceholder: "e.g., Abdullah Al-Qahtani",
                 regPhoneLabel: "Mobile Number (WhatsApp Contact)",
-                regChildLabel: "Child's Name & Age",
-                regChildPlaceholder: "e.g., Fahad (13 yrs)",
+                regChildLabel: "Participant Name & Age",
+                regChildPlaceholder: "e.g., Fahad (15 yrs)",
+                regDurationLabel: "Preferred Program Duration",
+                regDurationOptions: [
+                    "Intensive Track (3 Months)",
+                    "Comprehensive Transformation Track (6 Months)",
+                    "Determine Duration After Assessment"
+                ],
                 regCityLabel: "City / Region",
-                regChallengesLabel: "What behaviors would you like us to address? (Select all that apply)",
-                regNotesLabel: "Additional Notes or Health Information (Optional)",
-                regNotesPlaceholder: "Share any details regarding temperament, diet, or medical conditions...",
+                regCityOptions: [
+                    "Riyadh and Suburbs",
+                    "Jeddah and Makkah",
+                    "Eastern Province",
+                    "Qassim & Hail",
+                    "Asir & Southern Region",
+                    "Other Regions / Gulf Countries"
+                ],
+                regChallengesLabel: "What primary behaviors or challenges would you like addressed? (Select all that apply)",
+                regChallenges: [
+                    "Screen & Video Game Addiction",
+                    "Severe Anger & Volatile Temper",
+                    "Chronic Procrastination & Low Motivation",
+                    "Low Self-Confidence & Hesitation",
+                    "Stubbornness & Defiance to Authority",
+                    "Identity Confusion & Negative Peer Influence"
+                ],
+                regNotesLabel: "Additional Background or Health Notes (Optional)",
+                regNotesPlaceholder: "Provide details on behavioral history, personality traits, or medical needs...",
                 regSubmitBtn: "Submit Confidential Assessment Request",
-                regPrivacyNote: "All information is strictly confidential under professional medical and psychological privacy regulations.",
-                // Modal
-                modalTitle: "Reserve an Early Seat for Your Child",
+                regPrivacyNote: "All information is strictly confidential under medical and psychological professional privacy charters.",
+                // Footer (Full English)
+                footerBrandTitle: "Basma Camp",
+                footerBrandDesc: "The premier academy specializing in extended 3 to 6-month behavioral transformation camps to rebuild self-mastery, foster resilient leadership, and empower youth and adults.",
+                footerLinksTitle: "Quick Navigation",
+                footerLinks: [
+                    "Positive Transformation Philosophy",
+                    "Participant Audio & Video Stories",
+                    "Developmental Tracks (3-6 Months)",
+                    "Daily Schedule Blueprint",
+                    "Frequently Asked Questions"
+                ],
+                footerStandardsTitle: "Accreditations & Standards",
+                footerStandards: [
+                    "Accredited by National Youth Camps Federation",
+                    "Civil Defense Certified Safety Protocol",
+                    "Licensed Family & Psychological Counselors"
+                ],
+                footerContactTitle: "Headquarters Contact",
+                footerContactSubtitle: "We welcome your inquiries and are pleased to schedule an introductory campus visit.",
+                footerLocation: "Kingdom of Saudi Arabia • Riyadh",
+                footerCopyright: "All rights reserved to Basma Leadership & Transformation Camp © 2026",
+                footerPrivacyBtn: "Privacy Policy",
+                footerCharterBtn: "Participant Safety Charter",
+                footerTermsBtn: "Terms & Conditions",
+                // Modal (Full English)
+                modalTitle: "Reserve a Seat in the Camp (3 - 6 Months)",
                 modalDefaultSub: "Academy for Behavioral Growth & Youth Leadership",
-                modalParentLabel: "Guardian Name",
-                modalPhoneLabel: "Mobile Phone",
-                modalAgeLabel: "Child Age Group",
-                modalPeriodLabel: "Preferred Term",
-                modalSubmitBtn: "Confirm Assessment Seat",
+                modalParentLabel: "Guardian / Applicant Name",
+                modalParentPlaceholder: "Your Full Name",
+                modalPhoneLabel: "Mobile Phone Number",
+                modalAgeLabel: "Age Bracket",
+                modalAgeOptions: [
+                    "9 - 12 Years (Junior Cadets)",
+                    "13 - 16 Years (Teens)",
+                    "17 - 35 Years (Young Men & Adults)"
+                ],
+                modalTermLabel: "Target Duration",
+                modalTermOptions: [
+                    "3-Month Intensive Track",
+                    "6-Month Comprehensive Track"
+                ],
+                modalSubmitBtn: "Confirm Assessment Reservation",
                 // Toast
                 toastSuccessTitle: "Application Received Successfully!",
-                toastSuccessDesc: "Our family counselor will contact you via WhatsApp within 24 hours.",
+                toastSuccessDesc: "Our family counselor will contact you via WhatsApp within 24 hours to schedule the assessment.",
                 modalSuccessTitle: "Seat Reserved!",
-                modalSuccessDesc: "Camp details and location briefing have been sent to your registered phone number."
+                modalSuccessDesc: "Program details and campus orientation instructions have been sent to your registered mobile number."
             }
         };
 
@@ -1812,7 +1960,7 @@
             document.getElementById('m-nav-team').textContent = data.navTeam;
             document.getElementById('m-nav-faq').textContent = data.navFaq;
 
-            // Hero
+            // Hero Section
             const heroSection = document.querySelector('section');
             if (heroSection) {
                 const safetyBadge = heroSection.querySelector('.bg-emerald-100\\/80 span');
@@ -1928,7 +2076,7 @@
                     cards[0].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k1AfterLabel;
                     cards[0].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k1AfterDesc;
 
-                    // Kid 2: Mohammed Baksari
+                    // Kid 2: Mohammed Baksari (29 yrs)
                     cards[1].querySelector('h4').textContent = data.k2Name;
                     cards[1].querySelector('span.text-slate-400').textContent = data.k2Meta;
                     cards[1].querySelector('span.border-purple-500\\/30').textContent = data.k2Tag;
@@ -1945,7 +2093,7 @@
                     cards[2].querySelector('p.text-slate-300').textContent = data.k3Quote;
                     cards[2].querySelector('.bg-rose-950\\/40 .font-bold').textContent = data.k3BeforeLabel;
                     cards[2].querySelector('.bg-rose-950\\/40 .text-slate-300').textContent = data.k3BeforeDesc;
-                    cards[2].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k3AfterLabel;
+                    cards[2].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k2AfterLabel;
                     cards[2].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k3AfterDesc;
 
                     // Kid 4: Yassin
@@ -1988,7 +2136,7 @@
                 }
             }
 
-            // Schedule Section (Full Bilingual Translation)
+            // Schedule Section
             const schedSec = document.getElementById('schedule');
             if (schedSec) {
                 schedSec.querySelector('span.text-brand-600').textContent = data.schedTag;
@@ -2036,34 +2184,49 @@
                 });
             }
 
-            // Programs Section
-            const progSec = document.getElementById('programs');
-            if (progSec) {
-                progSec.querySelector('span.text-brand-600').textContent = data.progTag;
-                progSec.querySelector('h2').textContent = data.progTitle;
-                progSec.querySelector('p.text-slate-600').textContent = data.progDesc;
+            // Programs Section (Updated to 3-6 Months and 17-35 Years)
+            document.getElementById('prog-badge').textContent = data.progTag;
+            document.getElementById('prog-heading').textContent = data.progTitle;
+            document.getElementById('prog-desc').textContent = data.progDesc;
 
-                const progCards = progSec.querySelectorAll('.grid > div');
-                if (progCards.length >= 3) {
-                    // Card 1
-                    progCards[0].querySelector('span.text-brand-700').textContent = data.pCard1Badge;
-                    progCards[0].querySelector('h3').textContent = data.pCard1Title;
-                    progCards[0].querySelector('p').textContent = data.pCard1Desc;
-                    progCards[0].querySelector('button').textContent = data.pCard1Btn;
+            // Card 1
+            const card1 = document.getElementById('prog-card-1');
+            if (card1) {
+                card1.querySelector('.prog-age').textContent = data.pCard1Badge;
+                card1.querySelector('.prog-title').textContent = data.pCard1Title;
+                card1.querySelector('.prog-summary').textContent = data.pCard1Desc;
+                const fSpans = card1.querySelectorAll('.prog-features span');
+                data.pCard1Features.forEach((feat, idx) => {
+                    if (fSpans[idx]) fSpans[idx].textContent = feat;
+                });
+                card1.querySelector('.prog-btn').textContent = data.pCard1Btn;
+            }
 
-                    // Card 2
-                    progCards[1].querySelector('.bg-gradient-to-r').textContent = data.pCard2BadgeTop;
-                    progCards[1].querySelector('span.text-amber-800').textContent = data.pCard2Badge;
-                    progCards[1].querySelector('h3').textContent = data.pCard2Title;
-                    progCards[1].querySelector('p').textContent = data.pCard2Desc;
-                    progCards[1].querySelector('button').textContent = data.pCard2Btn;
+            // Card 2
+            const card2 = document.getElementById('prog-card-2');
+            if (card2) {
+                card2.querySelector('.prog-highlight').textContent = data.pCard2BadgeTop;
+                card2.querySelector('.prog-age').textContent = data.pCard2Badge;
+                card2.querySelector('.prog-title').textContent = data.pCard2Title;
+                card2.querySelector('.prog-summary').textContent = data.pCard2Desc;
+                const fSpans = card2.querySelectorAll('.prog-features span');
+                data.pCard2Features.forEach((feat, idx) => {
+                    if (fSpans[idx]) fSpans[idx].textContent = feat;
+                });
+                card2.querySelector('.prog-btn').textContent = data.pCard2Btn;
+            }
 
-                    // Card 3
-                    progCards[2].querySelector('span.text-indigo-700').textContent = data.pCard3Badge;
-                    progCards[2].querySelector('h3').textContent = data.pCard3Title;
-                    progCards[2].querySelector('p').textContent = data.pCard3Desc;
-                    progCards[2].querySelector('button').textContent = data.pCard3Btn;
-                }
+            // Card 3 (17 - 35 Years)
+            const card3 = document.getElementById('prog-card-3');
+            if (card3) {
+                card3.querySelector('.prog-age').textContent = data.pCard3Badge;
+                card3.querySelector('.prog-title').textContent = data.pCard3Title;
+                card3.querySelector('.prog-summary').textContent = data.pCard3Desc;
+                const fSpans = card3.querySelectorAll('.prog-features span');
+                data.pCard3Features.forEach((feat, idx) => {
+                    if (fSpans[idx]) fSpans[idx].textContent = feat;
+                });
+                card3.querySelector('.prog-btn').textContent = data.pCard3Btn;
             }
 
             // Team Section
@@ -2103,81 +2266,99 @@
                 }
             }
 
-            // FAQ Section (Full Bilingual Translation)
-            const faqSec = document.getElementById('faq');
-            if (faqSec) {
-                document.getElementById('faq-badge').textContent = data.faqTag;
-                document.getElementById('faq-heading').textContent = data.faqTitle;
-
-                const faqItems = document.querySelectorAll('.faq-item');
-                data.faqs.forEach((faq, index) => {
-                    if (faqItems[index]) {
-                        const qSpan = faqItems[index].querySelector('.faq-question');
-                        const aDiv = faqItems[index].querySelector('.faq-answer');
-                        const btn = faqItems[index].querySelector('button');
-                        if (qSpan) qSpan.textContent = faq.q;
-                        if (aDiv) aDiv.textContent = faq.a;
-                        if (btn) {
-                            btn.className = lang === 'ar'
-                                ? "w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900"
-                                : "w-full text-left p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900";
-                        }
+            // FAQ Section
+            document.getElementById('faq-badge').textContent = data.faqTag;
+            document.getElementById('faq-heading').textContent = data.faqTitle;
+            const faqItems = document.querySelectorAll('.faq-item');
+            data.faqs.forEach((faq, index) => {
+                if (faqItems[index]) {
+                    const qSpan = faqItems[index].querySelector('.faq-question');
+                    const aDiv = faqItems[index].querySelector('.faq-answer');
+                    const btn = faqItems[index].querySelector('button');
+                    if (qSpan) qSpan.textContent = faq.q;
+                    if (aDiv) aDiv.textContent = faq.a;
+                    if (btn) {
+                        btn.className = lang === 'ar'
+                            ? "w-full text-right p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900"
+                            : "w-full text-left p-5 flex items-center justify-between bg-slate-50 hover:bg-slate-100/80 transition font-bold text-navy-900";
                     }
-                });
-            }
-
-            // Register Section
-            const regSec = document.getElementById('register');
-            if (regSec) {
-                regSec.querySelector('span.bg-amber-400').textContent = data.regTag;
-                regSec.querySelector('h2').textContent = data.regTitle;
-                regSec.querySelector('p.text-slate-300').textContent = data.regDesc;
-
-                const form = document.getElementById('evaluationForm');
-                if (form) {
-                    const labels = form.querySelectorAll('label');
-                    if (labels.length >= 6) {
-                        labels[0].textContent = data.regParentLabel;
-                        labels[1].textContent = data.regPhoneLabel;
-                        labels[2].textContent = data.regChildLabel;
-                        labels[3].textContent = data.regCityLabel;
-                        labels[4].textContent = data.regChallengesLabel;
-                        labels[5].textContent = data.regNotesLabel;
-                    }
-                    const inputs = form.querySelectorAll('input[type="text"]');
-                    if (inputs.length >= 2) {
-                        inputs[0].placeholder = data.regParentPlaceholder;
-                        inputs[1].placeholder = data.regChildPlaceholder;
-                    }
-                    const textarea = form.querySelector('textarea');
-                    if (textarea) textarea.placeholder = data.regNotesPlaceholder;
-
-                    const submitBtn = form.querySelector('button[type="submit"] span');
-                    if (submitBtn) submitBtn.textContent = data.regSubmitBtn;
-
-                    const privacyNote = form.querySelector('p.text-\\[11px\\]');
-                    if (privacyNote) privacyNote.innerHTML = `<i class="fa-solid fa-lock ml-1 mr-1 text-emerald-400"></i> ${data.regPrivacyNote}`;
                 }
-            }
+            });
 
-            // Modal Labels
-            const modal = document.getElementById('registerModal');
-            if (modal) {
-                modal.querySelector('h3').textContent = data.modalTitle;
-                const modalSub = document.getElementById('modalProgramName');
-                if (modalSub && (modalSub.textContent.includes('أكاديمية') || modalSub.textContent.includes('Academy'))) {
-                    modalSub.textContent = data.modalDefaultSub;
-                }
-                const mLabels = modal.querySelectorAll('label');
-                if (mLabels.length >= 4) {
-                    mLabels[0].textContent = data.modalParentLabel;
-                    mLabels[1].textContent = data.modalPhoneLabel;
-                    mLabels[2].textContent = data.modalAgeLabel;
-                    mLabels[3].textContent = data.modalPeriodLabel;
-                }
-                const mBtn = modal.querySelector('button[type="submit"]');
-                if (mBtn) mBtn.textContent = data.modalSubmitBtn;
-            }
+            // Register Section (Comprehensive Translation)
+            document.getElementById('reg-badge').textContent = data.regTag;
+            document.getElementById('reg-heading').textContent = data.regTitle;
+            document.getElementById('reg-desc').textContent = data.regDesc;
+
+            document.getElementById('lbl-parent-name').textContent = data.regParentLabel;
+            document.getElementById('input-parent-name').placeholder = data.regParentPlaceholder;
+            document.getElementById('lbl-phone').textContent = data.regPhoneLabel;
+            document.getElementById('lbl-child-name').textContent = data.regChildLabel;
+            document.getElementById('input-child-name').placeholder = data.regChildPlaceholder;
+
+            document.getElementById('lbl-duration').textContent = data.regDurationLabel;
+            const durOpts = document.querySelectorAll('#select-duration option');
+            data.regDurationOptions.forEach((optText, i) => {
+                if (durOpts[i]) durOpts[i].textContent = optText;
+            });
+
+            document.getElementById('lbl-city').textContent = data.regCityLabel;
+            const cityOpts = document.querySelectorAll('#select-city option');
+            data.regCityOptions.forEach((optText, i) => {
+                if (cityOpts[i]) cityOpts[i].textContent = optText;
+            });
+
+            document.getElementById('lbl-challenges').textContent = data.regChallengesLabel;
+            const challengeSpans = document.querySelectorAll('#challenges-grid .challenge-label');
+            data.regChallenges.forEach((chText, i) => {
+                if (challengeSpans[i]) challengeSpans[i].textContent = chText;
+            });
+
+            document.getElementById('lbl-notes').textContent = data.regNotesLabel;
+            document.getElementById('input-notes').placeholder = data.regNotesPlaceholder;
+            document.querySelector('#btn-submit-reg span').textContent = data.regSubmitBtn;
+            document.getElementById('txt-privacy-note').innerHTML = `<i class="fa-solid fa-lock ml-1 mr-1 text-emerald-400"></i> ${data.regPrivacyNote}`;
+
+            // Footer Section
+            document.getElementById('footer-brand-title').textContent = data.footerBrandTitle;
+            document.getElementById('footer-brand-desc').textContent = data.footerBrandDesc;
+            document.getElementById('footer-links-title').textContent = data.footerLinksTitle;
+            data.footerLinks.forEach((link, idx) => {
+                const el = document.getElementById(`footer-link-${idx + 1}`);
+                if (el) el.textContent = link;
+            });
+
+            document.getElementById('footer-standards-title').textContent = data.footerStandardsTitle;
+            data.footerStandards.forEach((std, idx) => {
+                const el = document.getElementById(`footer-std-${idx + 1}`);
+                if (el) el.textContent = std;
+            });
+
+            document.getElementById('footer-contact-title').textContent = data.footerContactTitle;
+            document.getElementById('footer-contact-subtitle').textContent = data.footerContactSubtitle;
+            document.getElementById('footer-location-txt').textContent = data.footerLocation;
+            document.getElementById('footer-copyright').textContent = data.footerCopyright;
+            document.getElementById('footer-privacy-btn').textContent = data.footerPrivacyBtn;
+            document.getElementById('footer-charter-btn').textContent = data.footerCharterBtn;
+            document.getElementById('footer-terms-btn').textContent = data.footerTermsBtn;
+
+            // Modal Section
+            document.getElementById('modal-title').textContent = data.modalTitle;
+            document.getElementById('modalProgramName').textContent = data.modalDefaultSub;
+            document.getElementById('modal-lbl-name').textContent = data.modalParentLabel;
+            document.getElementById('modal-input-name').placeholder = data.modalParentPlaceholder;
+            document.getElementById('modal-lbl-phone').textContent = data.modalPhoneLabel;
+            document.getElementById('modal-lbl-age').textContent = data.modalAgeLabel;
+            const mAgeOpts = document.querySelectorAll('#modal-select-age option');
+            data.modalAgeOptions.forEach((optText, i) => {
+                if (mAgeOpts[i]) mAgeOpts[i].textContent = optText;
+            });
+            document.getElementById('modal-lbl-term').textContent = data.modalTermLabel;
+            const mTermOpts = document.querySelectorAll('#modal-select-term option');
+            data.modalTermOptions.forEach((optText, i) => {
+                if (mTermOpts[i]) mTermOpts[i].textContent = optText;
+            });
+            document.getElementById('modal-btn-submit').textContent = data.modalSubmitBtn;
         }
 
         // Language Switch Toggle Handler
