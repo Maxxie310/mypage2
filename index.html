@@ -7,7 +7,7 @@
     <!-- Google Fonts: Cairo & Tajawal -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@300;500;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Tailwind CSS CDN -->
@@ -20,6 +20,7 @@
                     fontFamily: {
                         cairo: ['Cairo', 'sans-serif'],
                         tajawal: ['Tajawal', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -85,6 +86,19 @@
             background: #10b981;
             border-radius: 9999px;
         }
+        
+        /* Language transition styling */
+        html[dir="ltr"] body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        html[dir="ltr"] h1, 
+        html[dir="ltr"] h2, 
+        html[dir="ltr"] h3, 
+        html[dir="ltr"] h4, 
+        html[dir="ltr"] .font-heading {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            letter-spacing: -0.02em;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
@@ -92,13 +106,13 @@
     <!-- Top Announcement Bar -->
     <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-teal-900 text-white text-xs sm:text-sm py-2 px-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-2 space-x-reverse">
+            <div class="flex items-center space-x-2 space-x-reverse" id="top-announcement-wrap">
                 <span class="inline-block w-2.5 h-2.5 bg-amber-400 rounded-full animate-ping"></span>
-                <span>باب التسجيل لموسم العطلة القادمة مفتوح الآن (المقاعد محدودة لـ 45 مشتركاً فقط لضمان التركيز الفردي)</span>
+                <span id="txt-top-announcement">باب التسجيل لموسم العطلة القادمة مفتوح الآن (المقاعد محدودة لـ 45 مشتركاً فقط لضمان التركيز الفردي)</span>
             </div>
             <a href="#register" class="hidden md:inline-flex items-center gap-1.5 text-amber-300 hover:text-amber-200 font-bold transition">
-                <span>احجز تقييم مستوى لطفلك</span>
-                <i class="fa-solid fa-arrow-left text-xs"></i>
+                <span id="txt-top-cta">احجز تقييم مستوى لطفلك</span>
+                <i class="fa-solid fa-arrow-left text-xs transition-transform" id="top-arrow-icon"></i>
             </a>
         </div>
     </div>
@@ -112,31 +126,37 @@
                     <i class="fa-solid fa-compass text-2xl"></i>
                 </div>
                 <div>
-                    <span class="text-2xl font-extrabold text-navy-900 font-heading tracking-tight flex items-center gap-1">
+                    <span class="text-2xl font-extrabold text-navy-900 font-heading tracking-tight flex items-center gap-1" id="nav-brand-title">
                         مخيّم <span class="text-brand-600">بَصمـة</span>
                     </span>
-                    <p class="text-[11px] text-slate-500 font-medium -mt-1">أكاديمية التحول القيادي وبناء السلوك</p>
+                    <p class="text-[11px] text-slate-500 font-medium -mt-1" id="nav-brand-subtitle">أكاديمية التحول القيادي وبناء السلوك</p>
                 </div>
             </a>
 
             <!-- Navigation Links -->
             <div class="hidden lg:flex items-center gap-8 font-semibold text-slate-600">
-                <a href="#about" class="hover:text-brand-600 transition">فلسفة التغيير</a>
-                <a href="#programs" class="hover:text-brand-600 transition">برامج المخيم</a>
+                <a href="#about" class="hover:text-brand-600 transition" id="nav-link-about">فلسفة التغيير</a>
+                <a href="#programs" class="hover:text-brand-600 transition" id="nav-link-programs">برامج المخيم</a>
                 <a href="#experiences" class="text-brand-700 bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200 flex items-center gap-2">
                     <i class="fa-solid fa-microphone-lines text-amber-500"></i>
-                    <span>تجارب الأبطال</span>
+                    <span id="nav-link-experiences">تجارب الأبطال</span>
                 </a>
-                <a href="#schedule" class="hover:text-brand-600 transition">يوم في المخيم</a>
-                <a href="#team" class="hover:text-brand-600 transition">فريق المشرفين</a>
-                <a href="#faq" class="hover:text-brand-600 transition">الأسئلة الشائعة</a>
+                <a href="#schedule" class="hover:text-brand-600 transition" id="nav-link-schedule">يوم في المخيم</a>
+                <a href="#team" class="hover:text-brand-600 transition" id="nav-link-team">فريق المشرفين</a>
+                <a href="#faq" class="hover:text-brand-600 transition" id="nav-link-faq">الأسئلة الشائعة</a>
             </div>
 
             <!-- Action Buttons -->
             <div class="flex items-center gap-3">
+                <!-- Language Toggle Button -->
+                <button onclick="toggleLanguage()" id="langToggleBtn" class="flex items-center gap-1.5 px-3 py-2 rounded-xl border border-slate-300 hover:border-brand-500 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold transition shadow-sm" aria-label="Toggle language">
+                    <i class="fa-solid fa-globe text-brand-600 text-sm"></i>
+                    <span id="langBtnText">English</span>
+                </button>
+
                 <button onclick="openRegisterModal()" class="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-teal-600 hover:from-brand-700 hover:to-teal-700 text-white font-bold text-sm shadow-md hover:shadow-glow transition transform active:scale-95">
                     <i class="fa-solid fa-paper-plane text-xs"></i>
-                    <span>تسجيل ابنك الآن</span>
+                    <span id="nav-enroll-btn">تسجيل ابنك الآن</span>
                 </button>
                 <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition" aria-label="القائمة">
                     <i class="fa-solid fa-bars-staggered text-xl"></i>
@@ -147,15 +167,23 @@
         <!-- Mobile Drawer Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white/95 border-b border-slate-200 px-6 py-5 shadow-xl">
             <div class="flex flex-col gap-4 font-semibold text-slate-700">
-                <a href="#about" class="py-2 border-b border-slate-100 hover:text-brand-600">فلسفة التغيير</a>
-                <a href="#programs" class="py-2 border-b border-slate-100 hover:text-brand-600">برامج المخيم</a>
+                <!-- Mobile Language Switch -->
+                <button onclick="toggleLanguage()" class="flex items-center justify-between py-2 border-b border-slate-100 text-slate-800 font-bold text-sm">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-globe text-brand-600"></i>
+                        <span id="mobileLangBtnText">Switch to English</span>
+                    </span>
+                    <span class="bg-brand-50 text-brand-700 text-xs px-2.5 py-1 rounded-md border border-brand-200 font-bold" id="mobileLangBadge">EN</span>
+                </button>
+                <a href="#about" class="py-2 border-b border-slate-100 hover:text-brand-600" id="m-nav-about">فلسفة التغيير</a>
+                <a href="#programs" class="py-2 border-b border-slate-100 hover:text-brand-600" id="m-nav-programs">برامج المخيم</a>
                 <a href="#experiences" class="py-2 border-b border-slate-100 text-brand-600 flex items-center justify-between">
-                    <span>قصص وتجارب الفتية</span>
-                    <span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full">مميّز</span>
+                    <span id="m-nav-experiences">قصص وتجارب الفتية</span>
+                    <span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded-full" id="m-nav-exp-badge">مميّز</span>
                 </a>
-                <a href="#schedule" class="py-2 border-b border-slate-100 hover:text-brand-600">جدول اليوم النموذجي</a>
-                <a href="#team" class="py-2 border-b border-slate-100 hover:text-brand-600">المشرفون والأخصائيون</a>
-                <a href="#faq" class="py-2 hover:text-brand-600">الأسئلة الشائعة</a>
+                <a href="#schedule" class="py-2 border-b border-slate-100 hover:text-brand-600" id="m-nav-schedule">جدول اليوم النموذجي</a>
+                <a href="#team" class="py-2 border-b border-slate-100 hover:text-brand-600" id="m-nav-team">المشرفون والأخصائيون</a>
+                <a href="#faq" class="py-2 hover:text-brand-600" id="m-nav-faq">الأسئلة الشائعة</a>
             </div>
         </div>
     </header>
@@ -460,7 +488,7 @@
                         <div class="space-y-3 pt-2">
                             <div class="text-purple-400 text-2xl font-serif">“</div>
                             <p class="text-slate-300 text-sm leading-relaxed -mt-4">
-                                أدمنت ألعاب الفيديو لساعات طويلة، وكنت غارقاً في تعديلات ومودات لعبة "سكايرم" (Skyrim mods) حتى تأثر تفكيري وسلوكي وميولي الفطرية والجسدية بصورة سلبية جداً وجعلتني مشوش الهوية. ما زاد حالتي سوءاً هو وجود شخص كان يلاحقني دائماً بتذكيري بأخطاء وسقطات الماضي ويحبطني، حتى أقنعني أنني لا أستطيع التغيير أبداً. في مخيم بصمة، ومع قطع الشاشات تماماً وورش العلاج السلوكي، تعلمت كيف أقطع حبال الماضي وأتحرر من كلام المحبطين. استعدت صفائي الفطري، وبدأت أرى نفسي شاباً قوياً صاحب هدف وشخصية سوية.
+                                أغرقني إدمان ألعاب الفيديو، وتحديداً مودات "سكايرم"، في تشويش فكري وهوية مشتتة أثّرت على سلوكي وفطرتي، حتى ظنت عائلتي أن ميولي انحرفت، وزاد إحباط شخص كان يلاحقني بعثرات الماضي من شعوري بالعجز. لكن في "مخيم بصمة"، ومع الانقطاع التام عن الشاشات وجلسات العلاج السلوكي، تحررت من أوهام الماضي ونظرات الشك، لأستعيد صفائي الفطري وهويتي السوية كرجل قوي صاحب هدف.
                             </p>
                         </div>
                     </div>
@@ -487,7 +515,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-extrabold text-white text-base font-heading">فيصل الحربي</h4>
-                                    <span class="text-xs text-slate-400">14 سنة • مخيم الصيف القيادي</span>
+                                    <span class="text-xs text-slate-400">20 سنة • مخيم الصيف القيادي</span>
                                 </div>
                             </div>
                             <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
@@ -1197,6 +1225,721 @@
     </div>
 
     <script>
+        // Language State & Translation Data Dictionary
+        let currentLanguage = localStorage.getItem('basma_lang') || 'ar';
+
+        const i18n = {
+            ar: {
+                pageTitle: "مخيم بصمة | لصناعة التغيير الإيجابي وتمكين قادة الغد",
+                langToggleText: "English",
+                mobileLangText: "التحويل للغة الإنجليزية (English)",
+                mobileLangBadge: "EN",
+                topAnnouncement: "باب التسجيل لموسم العطلة القادمة مفتوح الآن (المقاعد محدودة لـ 45 مشتركاً فقط لضمان التركيز الفردي)",
+                topCta: "احجز تقييم مستوى لطفلك",
+                brandTitle: "مخيّم <span class='text-brand-600'>بَصمـة</span>",
+                brandSubtitle: "أكاديمية التحول القيادي وبناء السلوك",
+                navAbout: "فلسفة التغيير",
+                navPrograms: "برامج المخيم",
+                navExperiences: "تجارب الأبطال",
+                navSchedule: "يوم في المخيم",
+                navTeam: "فريق المشرفين",
+                navFaq: "الأسئلة الشائعة",
+                navEnroll: "تسجيل ابنك الآن",
+                mNavExpBadge: "مميّز",
+                // Hero Section
+                heroSafetyBadge: "بيئة آمنة 100% بإشراف أخصائيين نفسيين وتربويين",
+                heroHeading: "لا نُغيّر شخصية طفلك، بل <br><span class='text-transparent bg-clip-text bg-gradient-to-l from-brand-600 via-teal-600 to-amber-500'>نوقظ أفضل نسخة بداخله!</span>",
+                heroDesc: "مخيّم تطويري مغلق يدمج بين تدريبات الانضباط، تخفيف إدمان الشاشات، صقل مهارات التواصل، ومواجهة التحديات في الطبيعة، ليعود ابنك إليك أكثر ثقة، مسؤولية، وهدوءاً نفسياً.",
+                heroBadgeDetox: "ديتوكس رقمي (فصل عن الشاشات)",
+                heroBadgeLeader: "تحديات قيادية واعتماد على النفس",
+                heroBadgeTherapy: "جلسات تفريغ وجداني وتوجيه سلوكي",
+                heroBtnEnroll: "احجز مقعد ابنك في الفوج القادم",
+                heroBtnListen: "استمع لتجارب المشتركين",
+                heroStatCompleted: "طفل ويافع أتموا المخيم بنجاح",
+                heroStatImprovement: "نسبة تحسن ملحوظ في سلوك الأبناء",
+                heroStatRatio: "مشرف متخصص لكل 5 أطفال",
+                heroCardBadgeTop: "14 يوماً تصنع فارق العمر",
+                heroCardBadgeMid: "تحول حقيقي، ليس مجرد نزهة",
+                heroCardQuote: "“تعلمت أن غضبي لن يحل مشاكلي، وأن قوتي الحقيقية في قدرتي على مساعدة زملائي”",
+                heroCardName: "ريّان المحمود (13 سنة)",
+                heroCardBatch: "خريج فوج الربيع - الرياض",
+                heroCardTag: "تحول سلوكي",
+                heroFloatingLabel: "منهجية علمية",
+                heroFloatingTitle: "علاج سلوكي معرفي (CBT) مبسط بنكهة المغامرة",
+                // Pillars Section
+                aboutTag: "ركائز التغيير الأربع",
+                aboutTitle: "كيف نساعد طفلك على تجاوز تحدياته السلوكية؟",
+                aboutDesc: "لا نعتمد العقاب أو الصراخ؛ بل نوفر بيئة موجهة تصنع الدوافع الداخلية وتساعد الطفل على اختبار قدراته وتحمل مسؤولية قراراته.",
+                p1Title: "الانضباط الذاتي اليومي",
+                p1Desc: "الاستيقاظ المبكر، ترتيب المساحة الشخصية، الالتزام بمواعيد الوجبات والتدريبات، ليعتاد الطفل أن الالتزام هو مفتاح الحرية والإنجاز.",
+                p2Title: "التعبير وإدارة الغضب",
+                p2Desc: "ورش عمل يومية يقودها معالجون نفسيون لتدريب المشتركين على فهم مشاعرهم، التعبير عن الإحباط بدون عدوانية، وحل الخلافات بالحوار.",
+                p3Title: "روح الفريق والمشاركة",
+                p3Desc: "ألعاب التحمل والمهمات الجماعية التي لا تنجح إلا بتعاون الجميع، مما يكسر الأنانية والانعزالية ويعزز مهارات القيادة والتعاطف.",
+                p4Title: "الاستدامة والمتابعة الأسرية",
+                p4Desc: "التغيير لا ينتهي بانتهاء المخيم؛ نقدم خطة دعم ومتابعة أسبوعية للأهل لمدة 3 أشهر لضمان ثبات العادات الإيجابية في المنزل والمدرسة.",
+                // Stories Section
+                expTag: "أصواتهم تحكي الحكاية",
+                expTitle: "تجارب الأطفال بأنفسهم: كيف تغيّرنا؟",
+                expDesc: "استمع واقرأ كلمات الأطفال واليافعين الذين خاضوا التحدي.. عن خوف البدايات، ولحظات الانتصار على النفس، والعودة بأجنحة جديدة.",
+                filterAll: "كل التجارب",
+                filterScreen: "إدمان الألعاب والشاشات",
+                filterRecovery: "التعافي واستعادة الهوية الفطرية",
+                filterAnger: "العصبية والعناد",
+                filterShyness: "الخجل وضعف الثقة",
+                // Kid 1
+                k1Name: "سعود العتيبي",
+                k1Meta: "12 سنة • مخيم الشتاء",
+                k1Tag: "الشاشات والعزلة",
+                k1Quote: "في أول يومين بكيت لأنهم أخذوا مني الـ iPad.. كنت أظن أن الحياة مستحيلة بدونه. لكن بعدما فزت في مسابقة نصب الخيام وصنعت أصدقاء حقيقيين، اكتشفت كم كنت أضيّع وقتي في عالم وهمي. أصبحت الآن أحب ركوب الخيل وأمارس الرياضة كل يوم.",
+                k1BeforeLabel: "قبل المخيم:",
+                k1BeforeDesc: "10 ساعات يومياً على الشاشات",
+                k1AfterLabel: "بعد المخيم:",
+                k1AfterDesc: "ساعة واحدة محددة والتزام بالرياضة",
+                // Kid 2 (Mohammed Baksari)
+                k2Name: "محمد باكسري",
+                k2Meta: "16 سنة • فوج تمكين الشباب والوعي الفطري",
+                k2Tag: "تجاوز الماضي وتصحيح المسار",
+                k2Quote: "أدمنت ألعاب الفيديو لساعات طويلة، وكنت غارقاً في تعديلات ومودات لعبة \"سكايرم\" (Skyrim mods) حتى تأثر تفكيري وسلوكي وميولي الفطرية والجسدية بصورة سلبية جداً وجعلتني مشوش الهوية. ما زاد حالتي سوءاً هو وجود شخص كان يلاحقني دائماً بتذكيري بأخطاء وسقطات الماضي ويحبطني، حتى أقنعني أنني لا أستطيع التغيير أبداً. في مخيم بصمة، ومع قطع الشاشات تماماً وورش العلاج السلوكي، تعلمت كيف أقطع حبال الماضي وأتحرر من كلام المحبطين. استعدت صفائي الفطري، وبدأت أرى نفسي شاباً قوياً صاحب هدف وشخصية سوية.",
+                k2BeforeLabel: "قبل المخيم:",
+                k2BeforeDesc: "تشوش الهوية والميول تحت وطأة الألعاب السامة واللوم المستمر",
+                k2AfterLabel: "بعد المخيم:",
+                k2AfterDesc: "استعادة الفطرة السليمة، التحرر من المحبطين، وبناء ثقة متينة بالذات",
+                // Kid 3
+                k3Name: "فيصل الحربي",
+                k3Meta: "14 سنة • مخيم الصيف القيادي",
+                k3Tag: "العناد وسرعة الانفعال",
+                k3Quote: "كنت دائماً أصرخ على أمي وإخوتي إذا لم يحدث ما أريد. المشرف كابتن طارق لم يعاقبني، بل علمني تمرين التنفس وجعلني قائد الطهي لمجموعتي. شعرت بالمسؤولية، وعرفت أن القوي ليس من يصرخ، بل من يملك أعصابه.",
+                k3BeforeLabel: "قبل المخيم:",
+                k3BeforeDesc: "عناد مستمر ورفض لأي توجيه",
+                k3AfterLabel: "بعد المخيم:",
+                k3AfterDesc: "احترام للأهل وقدرة على النقاش الهادئ",
+                // Kid 4
+                k4Name: "ياسين الزهراني",
+                k4Meta: "11 سنة • مخيم الاستكشاف",
+                k4Tag: "الخجل وضعف الشخصية",
+                k4Quote: "كنت أخاف أتكلم أمام أي شخص غريب وكنت أتعرض للتنمر في المدرسة ولا أرد. في مسرحية السمر بالمخيم، شجعوني حتى ألقيت كلمة أمام 50 شخصاً وصفقوا لي جميعاً. لأول مرة شعرت أن لي صوتاً وأنني شجاع!",
+                k4BeforeLabel: "قبل المخيم:",
+                k4BeforeDesc: "عزلة تامة وتجنب الحديث مع الناس",
+                k4AfterLabel: "بعد المخيم:",
+                k4AfterDesc: "شخصية واثقة ومتحدث بارع في صفه",
+                // Parent Testimonial Banner
+                parentTitle: "رسالة من والدة الطالب عمر (15 سنة):",
+                parentQuote: "“أرسلت ابني وأنا خائفة ومترددة، لكنه عاد إليّ رجلاً مسؤولاً يقبل رأسي، يرتب غرفته دون أن أطلب منه، ويسألني كيف يمكنه مساعدتي. شكراً لفريق مخيم بصمة لأنكم أعدتم لي ابني كما تمنيت.”",
+                parentBtn: "ابدأ قصة نجاح ابنك",
+                // Schedule
+                schedTag: "روتين يصنع الفارق",
+                schedTitle: "كيف يقضي طفلك يومه داخل المخيم؟",
+                schedDesc: "برنامج يومي متوازن ومدروس بعناية بين الانضباط البدني، التحفيز الذهني، الجلسات التربوية، والمرح الهادف.",
+                tabMorning: "الفترة الصباحية (النشاط والانضباط)",
+                tabAfternoon: "فترة الظهيرة (التحدي والمهارة)",
+                tabEvening: "الفترة المسائية (الحوار والتأمل)",
+                // Programs
+                progTag: "المسارات التدريبية",
+                progTitle: "برامج مخصصة حسب الفئة العمرية ونوع التحدي",
+                progDesc: "يتم فرز المشتركين في مجموعات صغيرة متقاربة بالعمر والاحتياج السلوكي لضمان أعلى فائدة.",
+                pCard1Badge: "الفئة: 9 - 12 سنة",
+                pCard1Title: "مخيم \"البطل الصغير\"",
+                pCard1Desc: "يركز على تقليل التعلق بالأجهزة، تحفيز التركيز، زرع آداب الاستئذان، تنظيم الغرفة والملابس، وبناء الثقة في التواصل مع الأقران.",
+                pCard1Btn: "طلب تسجيل في هذا المسار",
+                pCard2BadgeTop: "الأكثر طلباً للتحول الإيجابي",
+                pCard2Badge: "الفئة: 13 - 16 سنة",
+                pCard2Title: "مخيم \"قادة المستقبل\"",
+                pCard2Desc: "صُمم خصيصاً لمرحلة المراهقة والتحديات المصاحبة لها: العناد، الانعزال، ضغط الأصدقاء، وغياب الدافع الدراسي.",
+                pCard2Btn: "احجز مقعداً في الفوج القادم",
+                pCard3Badge: "الفئة: 14 - 17 سنة",
+                pCard3Title: "تحدي \"المرونة والصمود\"",
+                pCard3Desc: "برنامج مكثف للفتية الذين يحتاجون تعزيز الثقة بمواجهة الصعاب الحقيقية، والاعتماد التام على الذات في ظروف الطبيعة الجبلية والصحراوية.",
+                pCard3Btn: "طلب تسجيل في هذا المسار",
+                // Team & Safety
+                teamTag: "أمان ورعاية لا مثيل لها",
+                teamTitle: "بمن نضع ثقتنا لرعاية طفلك؟",
+                teamDesc: "ندرك حساسية وضع طفلك في بيئة مخيم؛ لذا فإن طاقمنا يخضع لأعلى معايير الفحص الأمني والنفسي، وتدريب دولي في حماية الطفل والإسعافات المتقدمة.",
+                tItem1Title: "أخصائيون نفسيون مقيمون",
+                tItem1Desc: "طاقم إرشادي حاصل على تصنيف الهيئة الصحية للتعامل مع نوبات القلق والتكيف السلوكي.",
+                tItem2Title: "متابعة يومية للأهل عبر البوابة الخاصة",
+                tItem2Desc: "نوافذ تصوير يومية وتقارير مسائية ترسل لولي الأمر للاطمئنان دون كسر تجربة استقلال الطفل.",
+                tItem3Title: "عيادة طبية وسيارة طوارئ متأهبة",
+                tItem3Desc: "كادر تمريضي متواجد على مدار 24 ساعة مع خطة إخلاء طبي معتمدة بالتعاون مع أقرب مستشفى مركزي.",
+                tStat1Num: "100%",
+                tStat1Title: "خالٍ من الهواتف الذكية",
+                tStat1Desc: "استعادة التواصل المباشر مع الحياة والناس",
+                tStat2Num: "12 فوجاً",
+                tStat2Title: "خبرة تراكمية ممتدة",
+                tStat2Desc: "تطوير مستمر للأدوات الإرشادية والتربوية",
+                tStat3Num: "3 وجبات",
+                tStat3Title: "تغذية متوازنة عضوية",
+                tStat3Desc: "وجبات طازجة لتعزيز النشاط وتقليل التوتر",
+                tStat4Num: "90 يوماً",
+                tStat4Title: "متابعة بعد انتهاء المعسكر",
+                tStat4Desc: "لضمان ثبات السلوك الجديد في البيئة المنزلية",
+                // FAQ
+                faqTag: "إجابات لراحة بالك",
+                faqTitle: "الأسئلة الأكثر شيوعاً بين أولياء الأمور",
+                // Register
+                regTag: "خطوة أولى نحو التحول",
+                regTitle: "طلب تقييم أولي وحجز مقعد",
+                regDesc: "املأ البيانات التالية ليتواصل معك مستشارنا التربوي ويحدد مدى ملاءمة المخيم لاحتياجات ابنك مجاناً.",
+                regParentLabel: "اسم ولي الأمر الكريم",
+                regParentPlaceholder: "مثال: عبدالله القحطاني",
+                regPhoneLabel: "رقم الجوال (واتساب للتواصل)",
+                regChildLabel: "اسم الابن / الابنة والعمر",
+                regChildPlaceholder: "مثال: فهد (13 سنة)",
+                regCityLabel: "المدينة / المنطقة",
+                regChallengesLabel: "ما هي أبرز السلوكيات التي ترغب في معالجتها؟ (اختر ما ينطبق)",
+                regNotesLabel: "ملاحظات إضافية يهمنا معرفتها (اختياري)",
+                regNotesPlaceholder: "اكتب أي معلومات عن شخصيته أو حالته الصحية...",
+                regSubmitBtn: "إرسال طلب التقييم السري وتأكيد الرغبة",
+                regPrivacyNote: "جميع المعلومات تعامل بسرية تامة وتخضع لميثاق الخصوصية المهنية للأخصائيين النفسيين.",
+                // Modal
+                modalTitle: "حجز مقعد مبكر لطفلك",
+                modalDefaultSub: "أكاديمية التحول الإيجابي وبناء السلوك",
+                modalParentLabel: "اسم ولي الأمر",
+                modalPhoneLabel: "رقم الجوال",
+                modalAgeLabel: "عمر الطفل",
+                modalPeriodLabel: "الفترة المفضلة",
+                modalSubmitBtn: "تأكيد حجز التقييم المبدئي",
+                // Toast
+                toastSuccessTitle: "تم استلام طلبكم بنجاح!",
+                toastSuccessDesc: "سيتواصل معكم المستشار التربوي خلال 24 ساعة عبر الواتساب.",
+                modalSuccessTitle: "تم حجز المقعد المبدئي!",
+                modalSuccessDesc: "تم إرسال تفاصيل الفوج وموقع المخيم إلى رقم الجوال المسجل."
+            },
+            en: {
+                pageTitle: "Basma Camp | Empowering Positive Change & Tomorrow's Leaders",
+                langToggleText: "العربية",
+                mobileLangText: "Switch to Arabic (العربية)",
+                mobileLangBadge: "AR",
+                topAnnouncement: "Registration for the upcoming holiday cohort is now open (Limited to 45 participants for personalized focus)",
+                topCta: "Book a Child Assessment",
+                brandTitle: "Basma <span class='text-brand-600'>Camp</span>",
+                brandSubtitle: "Leadership Transformation & Behavioral Academy",
+                navAbout: "Philosophy",
+                navPrograms: "Programs",
+                navExperiences: "Youth Stories",
+                navSchedule: "Daily Schedule",
+                navTeam: "Mentors & Team",
+                navFaq: "FAQ",
+                navEnroll: "Enroll Your Child",
+                mNavExpBadge: "Featured",
+                // Hero Section
+                heroSafetyBadge: "100% Safe Environment Supervised by Certified Psychologists & Educators",
+                heroHeading: "We don't change your child's core personality, <br><span class='text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-teal-600 to-amber-500'>We awaken their best version!</span>",
+                heroDesc: "An immersive developmental camp combining self-discipline, screen detox, emotional expression, and outdoor challenges—so your child returns more confident, respectful, and resilient.",
+                heroBadgeDetox: "Digital Detox (Screen-Free)",
+                heroBadgeLeader: "Leadership Drills & Self-Reliance",
+                heroBadgeTherapy: "Emotional Release & Behavioral Counseling",
+                heroBtnEnroll: "Reserve a Spot in the Next Cohort",
+                heroBtnListen: "Hear From the Participants",
+                heroStatCompleted: "Youth successfully graduated",
+                heroStatImprovement: "Reported positive behavioral growth",
+                heroStatRatio: "Certified mentor per 5 children",
+                heroCardBadgeTop: "14 Days That Shape a Lifetime",
+                heroCardBadgeMid: "Real Transformation, Not Just a Trip",
+                heroCardQuote: "“I learned that anger will never solve my problems, and my real strength comes from lifting up my peers.”",
+                heroCardName: "Rayan Al-Mahmoud (13 yrs)",
+                heroCardBatch: "Spring Cohort Graduate - Riyadh",
+                heroCardTag: "Behavioral Growth",
+                heroFloatingLabel: "Evidence-Based Method",
+                heroFloatingTitle: "Cognitive Behavioral Therapy (CBT) combined with adventure",
+                // Pillars Section
+                aboutTag: "Four Pillars of Transformation",
+                aboutTitle: "How do we help your child overcome behavioral hurdles?",
+                aboutDesc: "We never use shouting or punishment; we provide a structured environment that fosters internal motivation and helps kids take pride in their choices.",
+                p1Title: "Daily Self-Discipline",
+                p1Desc: "Early rising, maintaining personal quarters, and sticking to schedules so kids learn that self-discipline is the true key to freedom and achievement.",
+                p2Title: "Emotional Expression & Anger Management",
+                p2Desc: "Daily workshops guided by child psychologists to understand triggers, express frustration without hostility, and resolve conflicts through dialogue.",
+                p3Title: "Teamwork & Shared Responsibility",
+                p3Desc: "Endurance tasks and cooperative challenges that only succeed when everyone pitches in, replacing self-absorption with empathy and leadership.",
+                p4Title: "Sustainability & 90-Day Family Follow-up",
+                p4Desc: "Transformation continues after camp: we provide a 90-day structured parental guide and weekly check-ins to anchor new habits at home and school.",
+                // Stories Section
+                expTag: "Their Voices Tell The Story",
+                expTitle: "Youth Experiences: How We Changed",
+                expDesc: "Listen to and read the authentic words of youth who took the challenge—from the fear of leaving their comfort zones to the joy of triumph.",
+                filterAll: "All Stories",
+                filterScreen: "Screen & Gaming Detox",
+                filterRecovery: "Recovery & Restoring Natural Identity",
+                filterAnger: "Anger & Defiance",
+                filterShyness: "Shyness & Low Self-Esteem",
+                // Kid 1
+                k1Name: "Saud Al-Otaibi",
+                k1Meta: "12 yrs • Winter Cohort",
+                k1Tag: "Screens & Isolation",
+                k1Quote: "During the first two days I cried because they took my iPad... I thought life was impossible without it. But after winning the shelter-building contest and making genuine friends, I realized how much time I wasted in a fake world. Now I love horseback riding and train every day.",
+                k1BeforeLabel: "Before Camp:",
+                k1BeforeDesc: "10 hours daily glued to screens",
+                k1AfterLabel: "After Camp:",
+                k1AfterDesc: "1 strictly scheduled hour & daily fitness routine",
+                // Kid 2 (Mohammed Baksari)
+                k2Name: "Mohammed Baksari",
+                k2Meta: "16 yrs • Youth Empowerment & Natural Alignment Cohort",
+                k2Tag: "Overcoming the Past & Course Correction",
+                k2Quote: "My video game addiction—especially Skyrim mods—dragged me into mental chaos and identity confusion that warped my behavior and natural self, to the point where my family believed I was gay. To make matters worse, someone constantly pursued and reminded me of past mistakes, convincing me that I could never change. But at Basma Camp, through a complete digital detox and behavioral therapy workshops, I broke free from the burdens of the past and the doubts around me, reclaiming my inner clarity and building a grounded, purposeful identity as a strong man.",
+                k2BeforeLabel: "Before Camp:",
+                k2BeforeDesc: "Identity & instinct confusion under toxic gaming and relentless past blame",
+                k2AfterLabel: "After Camp:",
+                k2AfterDesc: "Restored natural alignment, freedom from negative peers, and rock-solid self-respect",
+                // Kid 3
+                k3Name: "Faisal Al-Harbi",
+                k3Meta: "14 yrs • Summer Leadership Camp",
+                k3Tag: "Anger & Stubbornness",
+                k3Quote: "I used to scream at my mother and siblings whenever I didn't get my way. Coach Tariq didn't punish me; he taught me breath control and appointed me team head-chef. I felt real responsibility, and learned that true strength is mastering your composure.",
+                k3BeforeLabel: "Before Camp:",
+                k3BeforeDesc: "Constant stubbornness and rejection of guidance",
+                k3AfterLabel: "After Camp:",
+                k3AfterDesc: "Respectful family communication and calm reasoning",
+                // Kid 4
+                k4Name: "Yassin Al-Zahrani",
+                k4Meta: "11 yrs • Discovery Cohort",
+                k4Tag: "Shyness & Weak Confidence",
+                k4Quote: "I was terrified of speaking in front of strangers and let kids bully me at school without standing up for myself. During the camp campfire play, they encouraged me to speak before 50 people and everyone cheered! For the first time, I felt my voice had power.",
+                k4BeforeLabel: "Before Camp:",
+                k4BeforeDesc: "Withdrawn and avoiding social situations",
+                k4AfterLabel: "After Camp:",
+                k4AfterDesc: "Confident, assertive speaker in class",
+                // Parent Testimonial Banner
+                parentTitle: "A heartfelt letter from the mother of Omar (15 yrs):",
+                parentQuote: "“I sent my son with fear and doubts, but he returned a respectful, dependable young man who greets me with love, cleans his room unprompted, and asks how he can help our family. Basma Camp gave me back the son I had prayed for.”",
+                parentBtn: "Start Your Child's Success Story",
+                // Schedule
+                schedTag: "A Daily Routine That Inspires",
+                schedTitle: "A Day in the Life at Basma Camp",
+                schedDesc: "A carefully balanced daily blueprint blending physical grit, mental acuity, mentoring circles, and wholesome fun.",
+                tabMorning: "Morning: Discipline & Vitality",
+                tabAfternoon: "Afternoon: Challenges & Skills",
+                tabEvening: "Evening: Reflection & Circles",
+                // Programs
+                progTag: "Targeted Pathways",
+                progTitle: "Programs Tailored to Age & Behavioral Needs",
+                progDesc: "Participants are assigned into small peer groups matched by age and behavioral goals to ensure focused mentorship.",
+                pCard1Badge: "Age: 9 - 12 Years",
+                pCard1Title: "“Young Champion” Camp",
+                pCard1Desc: "Focuses on breaking screen attachment, boosting attention span, bedroom cleanliness, polite etiquette, and making healthy friends.",
+                pCard1Btn: "Apply for Young Champion",
+                pCard2BadgeTop: "Most Popular Pathway",
+                pCard2Badge: "Age: 13 - 16 Years",
+                pCard2Title: "“Future Leaders” Camp",
+                pCard2Desc: "Crafted specifically for teenage crossroads: stubbornness, digital addiction, negative peer pressure, and lack of school motivation.",
+                pCard2Btn: "Reserve Spot in Future Leaders",
+                pCard3Badge: "Age: 14 - 17 Years",
+                pCard3Title: "“Grit & Resilience” Challenge",
+                pCard3Desc: "An intensive outdoor immersion for teens who need self-reliance, wilderness problem-solving, and emotional toughness in nature.",
+                pCard3Btn: "Apply for Grit & Resilience",
+                // Team & Safety
+                teamTag: "Safety & Uncompromising Care",
+                teamTitle: "Who will be guiding and caring for your child?",
+                teamDesc: "We recognize the immense trust you place in us; our team undergoes rigorous background checks, psychological screenings, and certified child-safeguarding protocols.",
+                tItem1Title: "Licensed Resident Psychologists",
+                tItem1Desc: "Licensed clinical practitioners skilled in adolescent anxiety, emotional regulation, and behavioral adaptation.",
+                tItem2Title: "Daily Secure Parent Portal",
+                tItem2Desc: "Daily photo/video summaries and evening progress logs sent directly to parents without breaking the child's independence.",
+                tItem3Title: "On-site Clinic & Standby Ambulance",
+                tItem3Desc: "24/7 registered nursing staff with direct emergency clearance alongside the nearest regional central hospital.",
+                tStat1Num: "100%",
+                tStat1Title: "Smartphone-Free Zone",
+                tStat1Desc: "Restoring organic human eye-contact & conversation",
+                tStat2Num: "12 Cohorts",
+                tStat2Title: "Proven Track Record",
+                tStat2Desc: "Continuously refined mentorship methodologies",
+                tStat3Num: "3 Meals",
+                tStat3Title: "Organic Balanced Nutrition",
+                tStat3Desc: "Fresh whole foods designed to lower hyperactivity",
+                tStat4Num: "90 Days",
+                tStat4Title: "Post-Camp Parent Guidance",
+                tStat4Desc: "Securing lasting positive behavior at home",
+                // FAQ
+                faqTag: "Answers For Your Peace of Mind",
+                faqTitle: "Frequently Asked Questions By Parents",
+                // Register
+                regTag: "The First Step Toward Growth",
+                regTitle: "Free Assessment & Registration Request",
+                regDesc: "Fill in the details below and one of our family counselors will reach out to evaluate your child's needs confidentially.",
+                regParentLabel: "Guardian / Parent Full Name",
+                regParentPlaceholder: "e.g., Abdullah Al-Qahtani",
+                regPhoneLabel: "Mobile Number (WhatsApp Contact)",
+                regChildLabel: "Child's Name & Age",
+                regChildPlaceholder: "e.g., Fahad (13 yrs)",
+                regCityLabel: "City / Region",
+                regChallengesLabel: "What behaviors would you like us to address? (Select all that apply)",
+                regNotesLabel: "Additional Notes or Health Information (Optional)",
+                regNotesPlaceholder: "Share any details regarding temperament, diet, or medical conditions...",
+                regSubmitBtn: "Submit Confidential Assessment Request",
+                regPrivacyNote: "All information is strictly confidential under professional medical and psychological privacy regulations.",
+                // Modal
+                modalTitle: "Reserve an Early Seat for Your Child",
+                modalDefaultSub: "Academy for Behavioral Growth & Youth Leadership",
+                modalParentLabel: "Guardian Name",
+                modalPhoneLabel: "Mobile Phone",
+                modalAgeLabel: "Child Age Group",
+                modalPeriodLabel: "Preferred Term",
+                modalSubmitBtn: "Confirm Assessment Seat",
+                // Toast
+                toastSuccessTitle: "Application Received Successfully!",
+                toastSuccessDesc: "Our family counselor will contact you via WhatsApp within 24 hours.",
+                modalSuccessTitle: "Seat Reserved!",
+                modalSuccessDesc: "Camp details and location briefing have been sent to your registered phone number."
+            }
+        };
+
+        // Apply Language Function
+        function applyLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('basma_lang', lang);
+            const data = i18n[lang];
+
+            // Set Document Direction & Language
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.title = data.pageTitle;
+
+            // Adjust Arrow Icons Direction
+            const arrowIcon = document.getElementById('top-arrow-icon');
+            if (arrowIcon) {
+                arrowIcon.className = lang === 'ar' 
+                    ? 'fa-solid fa-arrow-left text-xs transition-transform' 
+                    : 'fa-solid fa-arrow-right text-xs transition-transform';
+            }
+
+            // Buttons & Nav
+            document.getElementById('langBtnText').textContent = data.langToggleText;
+            document.getElementById('mobileLangBtnText').textContent = data.mobileLangText;
+            document.getElementById('mobileLangBadge').textContent = data.mobileLangBadge;
+            document.getElementById('txt-top-announcement').textContent = data.topAnnouncement;
+            document.getElementById('txt-top-cta').textContent = data.topCta;
+
+            document.getElementById('nav-brand-title').innerHTML = data.brandTitle;
+            document.getElementById('nav-brand-subtitle').textContent = data.brandSubtitle;
+            document.getElementById('nav-link-about').textContent = data.navAbout;
+            document.getElementById('nav-link-programs').textContent = data.navPrograms;
+            document.getElementById('nav-link-experiences').textContent = data.navExperiences;
+            document.getElementById('nav-link-schedule').textContent = data.navSchedule;
+            document.getElementById('nav-link-team').textContent = data.navTeam;
+            document.getElementById('nav-link-faq').textContent = data.navFaq;
+            document.getElementById('nav-enroll-btn').textContent = data.navEnroll;
+
+            // Mobile Nav
+            document.getElementById('m-nav-about').textContent = data.navAbout;
+            document.getElementById('m-nav-programs').textContent = data.navPrograms;
+            document.getElementById('m-nav-experiences').textContent = data.navExperiences;
+            document.getElementById('m-nav-exp-badge').textContent = data.mNavExpBadge;
+            document.getElementById('m-nav-schedule').textContent = data.navSchedule;
+            document.getElementById('m-nav-team').textContent = data.navTeam;
+            document.getElementById('m-nav-faq').textContent = data.navFaq;
+
+            // Hero
+            const heroSection = document.querySelector('section');
+            if (heroSection) {
+                const safetyBadge = heroSection.querySelector('.bg-emerald-100\\/80 span');
+                if (safetyBadge) safetyBadge.textContent = data.heroSafetyBadge;
+
+                const heading = heroSection.querySelector('h1');
+                if (heading) heading.innerHTML = data.heroHeading;
+
+                const heroP = heroSection.querySelector('p.text-slate-600');
+                if (heroP) heroP.textContent = data.heroDesc;
+
+                const badgePills = heroSection.querySelectorAll('.flex.flex-wrap.gap-4 span');
+                if (badgePills.length >= 3) {
+                    badgePills[0].textContent = data.heroBadgeDetox;
+                    badgePills[1].textContent = data.heroBadgeLeader;
+                    badgePills[2].textContent = data.heroBadgeTherapy;
+                }
+
+                const heroCta1 = heroSection.querySelector('button[onclick="openRegisterModal()"] span');
+                if (heroCta1) heroCta1.textContent = data.heroBtnEnroll;
+
+                const heroCta2 = heroSection.querySelector('a[href="#experiences"] span');
+                if (heroCta2) heroCta2.textContent = data.heroBtnListen;
+
+                // Trust Stats
+                const statsCols = heroSection.querySelectorAll('.border-t.border-slate-200\\/80 > div > div.text-xs');
+                if (statsCols.length >= 3) {
+                    statsCols[0].textContent = data.heroStatCompleted;
+                    statsCols[1].textContent = data.heroStatImprovement;
+                    statsCols[2].textContent = data.heroStatRatio;
+                }
+
+                // Card Preview
+                const cardTopBadge = heroSection.querySelector('.aspect-\\[4\\/5\\] .bg-white\\/90 span:last-child');
+                if (cardTopBadge) cardTopBadge.textContent = data.heroCardBadgeTop;
+
+                const cardMidBadge = heroSection.querySelector('.aspect-\\[4\\/5\\] .text-amber-400 span');
+                if (cardMidBadge) cardMidBadge.textContent = data.heroCardBadgeMid;
+
+                const cardQuote = heroSection.querySelector('.aspect-\\[4\\/5\\] h3');
+                if (cardQuote) cardQuote.textContent = data.heroCardQuote;
+
+                const cardName = heroSection.querySelector('.aspect-\\[4\\/5\\] .font-bold.text-sm');
+                if (cardName) cardName.textContent = data.heroCardName;
+
+                const cardBatch = heroSection.querySelector('.aspect-\\[4\\/5\\] .text-emerald-300');
+                if (cardBatch) cardBatch.textContent = data.heroCardBatch;
+
+                const cardTag = heroSection.querySelector('.aspect-\\[4\\/5\\] span.rounded.bg-white\\/10');
+                if (cardTag) cardTag.textContent = data.heroCardTag;
+
+                const floatingLabel = heroSection.querySelector('.max-w-xs .text-slate-400');
+                if (floatingLabel) floatingLabel.textContent = data.heroFloatingLabel;
+
+                const floatingTitle = heroSection.querySelector('.max-w-xs .text-navy-900');
+                if (floatingTitle) floatingTitle.textContent = data.heroFloatingTitle;
+            }
+
+            // About Section
+            const aboutSec = document.getElementById('about');
+            if (aboutSec) {
+                const tag = aboutSec.querySelector('span.text-brand-600');
+                if (tag) tag.textContent = data.aboutTag;
+                const h2 = aboutSec.querySelector('h2');
+                if (h2) h2.textContent = data.aboutTitle;
+                const p = aboutSec.querySelector('p.text-slate-600');
+                if (p) p.textContent = data.aboutDesc;
+
+                const pillars = aboutSec.querySelectorAll('.grid > div');
+                if (pillars.length >= 4) {
+                    pillars[0].querySelector('h3').textContent = data.p1Title;
+                    pillars[0].querySelector('p').textContent = data.p1Desc;
+                    pillars[1].querySelector('h3').textContent = data.p2Title;
+                    pillars[1].querySelector('p').textContent = data.p2Desc;
+                    pillars[2].querySelector('h3').textContent = data.p3Title;
+                    pillars[2].querySelector('p').textContent = data.p3Desc;
+                    pillars[3].querySelector('h3').textContent = data.p4Title;
+                    pillars[3].querySelector('p').textContent = data.p4Desc;
+                }
+            }
+
+            // Experiences Section
+            const expSec = document.getElementById('experiences');
+            if (expSec) {
+                const tag = expSec.querySelector('.text-amber-400');
+                if (tag) tag.innerHTML = `<i class="fa-solid fa-microphone-lines"></i> ${data.expTag}`;
+                const h2 = expSec.querySelector('h2');
+                if (h2) h2.textContent = data.expTitle;
+                const p = expSec.querySelector('p.text-slate-400');
+                if (p) p.textContent = data.expDesc;
+
+                // Filters
+                const filterBtns = document.querySelectorAll('#story-filters button');
+                if (filterBtns.length >= 5) {
+                    filterBtns[0].textContent = data.filterAll;
+                    filterBtns[1].textContent = data.filterScreen;
+                    filterBtns[2].textContent = data.filterRecovery;
+                    filterBtns[3].textContent = data.filterAnger;
+                    filterBtns[4].textContent = data.filterShyness;
+                }
+
+                // Kid 1 (Saud)
+                const cards = document.querySelectorAll('.story-card');
+                if (cards.length >= 4) {
+                    // Kid 1
+                    cards[0].querySelector('h4').textContent = data.k1Name;
+                    cards[0].querySelector('span.text-slate-400').textContent = data.k1Meta;
+                    cards[0].querySelector('span.border-rose-500\\/30').textContent = data.k1Tag;
+                    cards[0].querySelector('p.text-slate-300').textContent = data.k1Quote;
+                    cards[0].querySelector('.bg-rose-950\\/40 .font-bold').textContent = data.k1BeforeLabel;
+                    cards[0].querySelector('.bg-rose-950\\/40 .text-slate-300').textContent = data.k1BeforeDesc;
+                    cards[0].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k1AfterLabel;
+                    cards[0].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k1AfterDesc;
+
+                    // Kid 2 (Mohammed Baksari)
+                    cards[1].querySelector('h4').textContent = data.k2Name;
+                    cards[1].querySelector('span.text-slate-400').textContent = data.k2Meta;
+                    cards[1].querySelector('span.border-purple-500\\/30').textContent = data.k2Tag;
+                    cards[1].querySelector('p.text-slate-300').textContent = data.k2Quote;
+                    cards[1].querySelector('.bg-rose-950\\/40 .font-bold').textContent = data.k2BeforeLabel;
+                    cards[1].querySelector('.bg-rose-950\\/40 .text-slate-300').textContent = data.k2BeforeDesc;
+                    cards[1].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k2AfterLabel;
+                    cards[1].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k2AfterDesc;
+
+                    // Kid 3 (Faisal)
+                    cards[2].querySelector('h4').textContent = data.k3Name;
+                    cards[2].querySelector('span.text-slate-400').textContent = data.k3Meta;
+                    cards[2].querySelector('span.border-amber-500\\/30').textContent = data.k3Tag;
+                    cards[2].querySelector('p.text-slate-300').textContent = data.k3Quote;
+                    cards[2].querySelector('.bg-rose-950\\/40 .font-bold').textContent = data.k3BeforeLabel;
+                    cards[2].querySelector('.bg-rose-950\\/40 .text-slate-300').textContent = data.k3BeforeDesc;
+                    cards[2].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k3AfterLabel;
+                    cards[2].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k3AfterDesc;
+
+                    // Kid 4 (Yassin)
+                    cards[3].querySelector('h4').textContent = data.k4Name;
+                    cards[3].querySelector('span.text-slate-400').textContent = data.k4Meta;
+                    cards[3].querySelector('span.border-cyan-500\\/30').textContent = data.k4Tag;
+                    cards[3].querySelector('p.text-slate-300').textContent = data.k4Quote;
+                    cards[3].querySelector('.bg-rose-950\\/40 .font-bold').textContent = data.k4BeforeLabel;
+                    cards[3].querySelector('.bg-rose-950\\/40 .text-slate-300').textContent = data.k4BeforeDesc;
+                    cards[3].querySelector('.bg-emerald-950\\/40 .font-bold').textContent = data.k4AfterLabel;
+                    cards[3].querySelector('.bg-emerald-950\\/40 .text-slate-300').textContent = data.k4AfterDesc;
+                }
+
+                // Parent Testimonial Banner
+                const parentBanner = expSec.querySelector('.mt-12');
+                if (parentBanner) {
+                    parentBanner.querySelector('h4').textContent = data.parentTitle;
+                    parentBanner.querySelector('p').textContent = data.parentQuote;
+                    parentBanner.querySelector('button').textContent = data.parentBtn;
+                }
+            }
+
+            // Schedule Section
+            const schedSec = document.getElementById('schedule');
+            if (schedSec) {
+                schedSec.querySelector('span.text-brand-600').textContent = data.schedTag;
+                schedSec.querySelector('h2').textContent = data.schedTitle;
+                schedSec.querySelector('p.text-slate-600').textContent = data.schedDesc;
+
+                const schedButtons = schedSec.querySelectorAll('.schedule-tab');
+                if (schedButtons.length >= 3) {
+                    schedButtons[0].innerHTML = `<i class="fa-regular fa-sun ml-1.5 mr-1.5"></i> ${data.tabMorning}`;
+                    schedButtons[1].innerHTML = `<i class="fa-solid fa-mountain-sun ml-1.5 mr-1.5"></i> ${data.tabAfternoon}`;
+                    schedButtons[2].innerHTML = `<i class="fa-solid fa-campground ml-1.5 mr-1.5"></i> ${data.tabEvening}`;
+                }
+            }
+
+            // Programs Section
+            const progSec = document.getElementById('programs');
+            if (progSec) {
+                progSec.querySelector('span.text-brand-600').textContent = data.progTag;
+                progSec.querySelector('h2').textContent = data.progTitle;
+                progSec.querySelector('p.text-slate-600').textContent = data.progDesc;
+
+                const progCards = progSec.querySelectorAll('.grid > div');
+                if (progCards.length >= 3) {
+                    // Card 1
+                    progCards[0].querySelector('span.text-brand-700').textContent = data.pCard1Badge;
+                    progCards[0].querySelector('h3').textContent = data.pCard1Title;
+                    progCards[0].querySelector('p').textContent = data.pCard1Desc;
+                    progCards[0].querySelector('button').textContent = data.pCard1Btn;
+
+                    // Card 2
+                    progCards[1].querySelector('.bg-gradient-to-r').textContent = data.pCard2BadgeTop;
+                    progCards[1].querySelector('span.text-amber-800').textContent = data.pCard2Badge;
+                    progCards[1].querySelector('h3').textContent = data.pCard2Title;
+                    progCards[1].querySelector('p').textContent = data.pCard2Desc;
+                    progCards[1].querySelector('button').textContent = data.pCard2Btn;
+
+                    // Card 3
+                    progCards[2].querySelector('span.text-indigo-700').textContent = data.pCard3Badge;
+                    progCards[2].querySelector('h3').textContent = data.pCard3Title;
+                    progCards[2].querySelector('p').textContent = data.pCard3Desc;
+                    progCards[2].querySelector('button').textContent = data.pCard3Btn;
+                }
+            }
+
+            // Team Section
+            const teamSec = document.getElementById('team');
+            if (teamSec) {
+                teamSec.querySelector('span.text-brand-700').textContent = data.teamTag;
+                teamSec.querySelector('h2').textContent = data.teamTitle;
+                teamSec.querySelector('p.text-slate-600').textContent = data.teamDesc;
+
+                const teamItems = teamSec.querySelectorAll('.space-y-4 > div');
+                if (teamItems.length >= 3) {
+                    teamItems[0].querySelector('h4').textContent = data.tItem1Title;
+                    teamItems[0].querySelector('p').textContent = data.tItem1Desc;
+                    teamItems[1].querySelector('h4').textContent = data.tItem2Title;
+                    teamItems[1].querySelector('p').textContent = data.tItem2Desc;
+                    teamItems[2].querySelector('h4').textContent = data.tItem3Title;
+                    teamItems[2].querySelector('p').textContent = data.tItem3Desc;
+                }
+
+                const stats = teamSec.querySelectorAll('.lg\\:col-span-7 .bg-white');
+                if (stats.length >= 4) {
+                    stats[0].querySelector('.text-3xl').textContent = data.tStat1Num;
+                    stats[0].querySelector('.font-bold').textContent = data.tStat1Title;
+                    stats[0].querySelector('.text-slate-500').textContent = data.tStat1Desc;
+
+                    stats[1].querySelector('.text-3xl').textContent = data.tStat2Num;
+                    stats[1].querySelector('.font-bold').textContent = data.tStat2Title;
+                    stats[1].querySelector('.text-slate-500').textContent = data.tStat2Desc;
+
+                    stats[2].querySelector('.text-3xl').textContent = data.tStat3Num;
+                    stats[2].querySelector('.font-bold').textContent = data.tStat3Title;
+                    stats[2].querySelector('.text-slate-500').textContent = data.tStat3Desc;
+
+                    stats[3].querySelector('.text-3xl').textContent = data.tStat4Num;
+                    stats[3].querySelector('.font-bold').textContent = data.tStat4Title;
+                    stats[3].querySelector('.text-slate-500').textContent = data.tStat4Desc;
+                }
+            }
+
+            // FAQ Section
+            const faqSec = document.getElementById('faq');
+            if (faqSec) {
+                faqSec.querySelector('span.text-brand-600').textContent = data.faqTag;
+                faqSec.querySelector('h2').textContent = data.faqTitle;
+            }
+
+            // Register Section
+            const regSec = document.getElementById('register');
+            if (regSec) {
+                regSec.querySelector('span.bg-amber-400').textContent = data.regTag;
+                regSec.querySelector('h2').textContent = data.regTitle;
+                regSec.querySelector('p.text-slate-300').textContent = data.regDesc;
+
+                const form = document.getElementById('evaluationForm');
+                if (form) {
+                    const labels = form.querySelectorAll('label');
+                    if (labels.length >= 6) {
+                        labels[0].textContent = data.regParentLabel;
+                        labels[1].textContent = data.regPhoneLabel;
+                        labels[2].textContent = data.regChildLabel;
+                        labels[3].textContent = data.regCityLabel;
+                        labels[4].textContent = data.regChallengesLabel;
+                        labels[5].textContent = data.regNotesLabel;
+                    }
+                    const inputs = form.querySelectorAll('input[type="text"]');
+                    if (inputs.length >= 2) {
+                        inputs[0].placeholder = data.regParentPlaceholder;
+                        inputs[1].placeholder = data.regChildPlaceholder;
+                    }
+                    const textarea = form.querySelector('textarea');
+                    if (textarea) textarea.placeholder = data.regNotesPlaceholder;
+
+                    const submitBtn = form.querySelector('button[type="submit"] span');
+                    if (submitBtn) submitBtn.textContent = data.regSubmitBtn;
+
+                    const privacyNote = form.querySelector('p.text-\\[11px\\]');
+                    if (privacyNote) privacyNote.innerHTML = `<i class="fa-solid fa-lock ml-1 mr-1 text-emerald-400"></i> ${data.regPrivacyNote}`;
+                }
+            }
+
+            // Modal Labels
+            const modal = document.getElementById('registerModal');
+            if (modal) {
+                modal.querySelector('h3').textContent = data.modalTitle;
+                const modalSub = document.getElementById('modalProgramName');
+                if (modalSub && modalSub.textContent.includes('أكاديمية') || modalSub.textContent.includes('Academy')) {
+                    modalSub.textContent = data.modalDefaultSub;
+                }
+                const mLabels = modal.querySelectorAll('label');
+                if (mLabels.length >= 4) {
+                    mLabels[0].textContent = data.modalParentLabel;
+                    mLabels[1].textContent = data.modalPhoneLabel;
+                    mLabels[2].textContent = data.modalAgeLabel;
+                    mLabels[3].textContent = data.modalPeriodLabel;
+                }
+                const mBtn = modal.querySelector('button[type="submit"]');
+                if (mBtn) mBtn.textContent = data.modalSubmitBtn;
+            }
+        }
+
+        // Language Switch Toggle Handler
+        function toggleLanguage() {
+            const nextLang = currentLanguage === 'ar' ? 'en' : 'ar';
+            applyLanguage(nextLang);
+        }
+
+        // Initialize saved or default language on load
+        window.addEventListener('DOMContentLoaded', () => {
+            if (currentLanguage === 'en') {
+                applyLanguage('en');
+            }
+        });
+    </script>
+    <script>
         // Mobile Drawer Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -1307,7 +2050,8 @@
         // Form Handlers
         function handleFormSubmit(e) {
             e.preventDefault();
-            showNotification('تم استلام طلب التقييم بنجاح!', 'سيتواصل معكم المستشار النفسي والتربوي لتحديد موعد مقابلة الطفل.');
+            const data = i18n[currentLanguage] || i18n.ar;
+            showNotification(data.toastSuccessTitle, data.toastSuccessDesc);
             e.target.reset();
             const element = document.getElementById('register');
             if (element) {
@@ -1318,7 +2062,8 @@
         function handleModalSubmit(e) {
             e.preventDefault();
             closeRegisterModal();
-            showNotification('تم حجز المقعد المبدئي!', 'تم إرسال تفاصيل الفوج وموقع المخيم إلى رقم الجوال المسجل.');
+            const data = i18n[currentLanguage] || i18n.ar;
+            showNotification(data.modalSuccessTitle, data.modalSuccessDesc);
             e.target.reset();
         }
     </script>
